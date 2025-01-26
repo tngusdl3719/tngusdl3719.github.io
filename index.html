@@ -1,1 +1,713 @@
-Hello World
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>경력기술서</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6cfdee84-7af1-4e31-9747-3af06f5cace3" class="page sans"><header><h1 class="page-title">경력기술서</h1><p class="page-description"></p></header><div class="page-body"><h2 id="757866be-e267-407a-bf3c-1ed4b3ebafd5" class="">소개</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="42d62557-156b-4a75-8731-c46756221c9e"><div style="font-size:1.5em"><span class="icon">✋</span></div><div style="width:100%">안녕하세요! 킥스타트 서비스부터 대규모 서비스 개발/운영 경험이 있는 개발자 심수현입니다.<p id="b1c536a3-53d9-4085-87e0-8b711a58fa6e" class="">매 순간 개발 자체를 즐기고 새로운 기술이나 서비스를 발견하면 팀원들과 공유하고 함께 성장하기 위해 적극적으로 커뮤니케이션하는 성향입니다. </p><p id="b084d399-ff50-4244-a100-07076fe8e8c8" class="">팀의 기술적 성장에 관심이 많아서 기술 트랜드를 꾸준히 공부하며 저와 팀원 모두 더 나은 방향으로 가고 그 과정을 통해 성장해 나가는 모습을 보는 것이 개발자로 일하는 가장 큰 즐거움이라고 느끼며 저의 긍정적인 에너지를 전하고 훌륭한 서비스를 만들어가는데 기여하고 싶습니다.</p></div></figure><h2 id="15383e9a-5162-80fe-95e8-c10ff611e6c1" class="">Skill</h2><p id="16683e9a-5162-80f6-8522-c999d194e8f4" class="">업무에 사용중이거나 사용했던 기술들입니다.</p><div id="16683e9a-5162-8033-be95-e1e7e357df50" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><img src="https://www.notion.so/icons/computer-chip_gray.svg" style="width:14px;height:14px;display:block"/></span>Type</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/keyboard_gray.svg" style="width:14px;height:14px;display:block"/></span>Skill</th></tr></thead><tbody><tr id="16683e9a-5162-8064-81e6-fbfc69865cd6"><td class="cell-title"><a href="https://www.notion.so/Language-16683e9a5162806481e6fbfc69865cd6?pvs=21">Language</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-red">Java</span><span class="selected-value select-value-color-purple">Javascript</span><span class="selected-value select-value-color-orange">Kotlin</span><span class="selected-value select-value-color-blue">SQL</span><span class="selected-value select-value-color-gray">Typescript</span></td></tr><tr id="16683e9a-5162-805a-9026-d4673fa36247"><td class="cell-title"><a href="https://www.notion.so/Web-Framework-16683e9a5162805a9026d4673fa36247?pvs=21">Web Framework</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-green">Node.js</span><span class="selected-value select-value-color-purple">React</span><span class="selected-value select-value-color-blue">Spring Authorization Server</span><span class="selected-value select-value-color-yellow">Spring Batch</span><span class="selected-value select-value-color-brown">Spring Boot</span><span class="selected-value select-value-color-default">Spring Cloud</span><span class="selected-value select-value-color-pink">Spring Data JPA</span><span class="selected-value select-value-color-green">Spring Security</span></td></tr><tr id="16683e9a-5162-801b-b543-c574f373be59"><td class="cell-title"><a href="https://www.notion.so/Database-16683e9a5162801bb543c574f373be59?pvs=21">Database</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-blue">MariaDB</span><span class="selected-value select-value-color-pink">MongoDB</span><span class="selected-value select-value-color-pink">MySQL</span><span class="selected-value select-value-color-orange">Oracle</span><span class="selected-value select-value-color-gray">PostgreSQL</span></td></tr><tr id="16683e9a-5162-8088-bc9f-e8ce659f78b2"><td class="cell-title"><a href="https://www.notion.so/Message-Queue-16683e9a51628088bc9fe8ce659f78b2?pvs=21">Message Queue</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-brown">Kafka</span><span class="selected-value select-value-color-default">RabbitMQ</span></td></tr><tr id="16683e9a-5162-809c-adc3-e084eccfcdde"><td class="cell-title"><a href="https://www.notion.so/Cache-16683e9a5162809cadc3e084eccfcdde?pvs=21">Cache</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-blue">Caffeine</span><span class="selected-value select-value-color-brown">Redis</span></td></tr><tr id="16683e9a-5162-80c2-b212-dfdb76141d46"><td class="cell-title"><a href="https://www.notion.so/Server-Infra-16683e9a516280c2b212dfdb76141d46?pvs=21">Server Infra</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-red">Docker</span><span class="selected-value select-value-color-blue">Kubernetes</span></td></tr><tr id="16683e9a-5162-8010-a9b2-dec588c2c1d5"><td class="cell-title"><a href="https://www.notion.so/Cloud-16683e9a51628010a9b2dec588c2c1d5?pvs=21">Cloud</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-pink">AWS</span><span class="selected-value select-value-color-red">Azure</span></td></tr><tr id="16683e9a-5162-805f-80fc-deef10cf0abd"><td class="cell-title"><a href="https://www.notion.so/ETC-16683e9a5162805f80fcdeef10cf0abd?pvs=21">ETC</a></td><td class="cell-YKsF"><span class="selected-value select-value-color-orange">ArgoCD</span><span class="selected-value select-value-color-green">FlagSmith</span><span class="selected-value select-value-color-gray">Jenkins</span><span class="selected-value select-value-color-orange">Keycloak</span><span class="selected-value select-value-color-pink">Nginx</span><span class="selected-value select-value-color-pink">Pinpoint</span><span class="selected-value select-value-color-purple">Scavenger</span></td></tr></tbody></table><br/><br/></div><h2 id="ee93ec72-cae9-4a0d-8e0b-afea0715f637" class="">경력</h2><h3 id="b7cf1082-6f38-4387-9c6e-c9cbf2a6f607" class="">🏢 <span style="border-bottom:0.05em solid"><strong>SK플래닛</strong></span></h3><p id="2c374500-8854-4473-b73c-cb3165f38a63" class="">📅 <em><mark class="highlight-gray">2020.06 ~ 현재</mark></em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4429eade-a27b-4313-9d97-1d68e7a5b02c"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">V컬러링 서비스 개발<br/>BaaS(Battery as a Service: 전기차 배터리 진단 서비스) 플랫폼 개발<br/>스마트병원 개발<br/>스마트워크 솔루션 개발<br/>실버프랜드(인공지능 스피커 기반 노인 케어 서비스) 개발<br/></div></figure><h3 id="206e40c7-fc75-4304-b4db-3d1f9e738123" class="">🏢 <span style="border-bottom:0.05em solid"><strong>SK엔카닷컴</strong></span></h3><p id="6d10e335-39f2-498b-a393-ad3b2790619a" class="">📅 <em><mark class="highlight-gray">2016.11 ~ 2020.05(3년 7개월)</mark></em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3e24cb91-8c94-47e6-83a3-8c54bf087adc"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">엔카닷컴 서비스 개발<ul id="27685903-508d-4db2-96b2-fc48cea819fe" class="bulleted-list"><li style="list-style-type:disc">담당 도메인<ul id="14e83e9a-5162-80c4-a169-fbd02b327388" class="bulleted-list"><li style="list-style-type:circle">매거진, EV-POST, 차량진단, 차량보증, 금융상품, 후불결제, 서비스 상품, 주문, 결제, 상품 지급/적용, 비교견적</li></ul></li></ul></div></figure><h3 id="848882fe-6ff9-46dd-a96f-155461b9fd08" class="">🏢 <span style="border-bottom:0.05em solid"><strong>양재미디어</strong></span></h3><p id="f4840e9b-2045-466f-b797-c892c7a39502" class="">📅 <em><mark class="highlight-gray">2015.04 ~ 2016.10(1년 7개월)</mark></em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1cff3027-488f-4caa-8e79-2c6b6ade607f"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">CMS(콘텐츠 관리 시스템) 개발</div></figure><h3 id="36d52d83-febb-42fc-bda8-7a3c058c4679" class="">🏢 <span style="border-bottom:0.05em solid"><strong>지산웨어</strong></span></h3><p id="72e7b418-cbd6-439b-830c-b76513eb51f0" class="">📅 <mark class="highlight-gray"><em>2013.02 ~ 2015.04(2년 3개월)</em></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="9acbeaf1-2b60-4e83-8df1-e7b5776968ce"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%">로우코드 플랫폼 개발<br/>PMS(프로젝트 관리 시스템) 개발<br/></div></figure><p id="18783e9a-5162-8097-8a88-f13e44200171" class="">
+</p><figure id="18783e9a-5162-80dd-a55d-d5a86edc7c6a" class="image"><a href="%E1%84%80%E1%85%A7%E1%86%BC%E1%84%85%E1%85%A7%E1%86%A8%E1%84%80%E1%85%B5%E1%84%89%E1%85%AE%E1%86%AF%E1%84%89%E1%85%A5%206cfdee847af14e3197473af06f5cace3/image.png"><img style="width:709.953125px" src="%E1%84%80%E1%85%A7%E1%86%BC%E1%84%85%E1%85%A7%E1%86%A8%E1%84%80%E1%85%B5%E1%84%89%E1%85%AE%E1%86%AF%E1%84%89%E1%85%A5%206cfdee847af14e3197473af06f5cace3/image.png"/></a></figure><h2 id="bd9ba291-a419-4630-9a3e-8fe91688080b" class="">프로젝트 경력 상세</h2><h3 id="18783e9a-5162-80c6-8c4e-f0ad725f9832" class=""><strong><span style="border-bottom:0.05em solid">주요 수행 프로젝트</span></strong></h3><h3 id="80504d7d-4c67-4ea7-831a-d5d7dabd26dd" class="">🏢 <strong>SK플래닛</strong></h3><p id="6d761d7c-330a-4b2f-980e-01212abc8a79" class=""><strong><span style="border-bottom:0.05em solid">V컬러링</span></strong><span style="border-bottom:0.05em solid"><br/><br/></span>나에게 전화하는 상대방에게 내가 설정한 영상을 보여주는 서비스<br/>📅 <br/><mark class="highlight-gray"><em>2023.02 ~ </em></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="55887893-8313-4435-9baf-59887ab8347d"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java, Kotlin<br/>프레임워크: Spring Boot, Spring Data JPA, Spring Batch, Spring Security, Spring Authorization Server<br/>DB 및 메시징: MySQL, Redis, RabbitMQ<br/>인프라: IDC, k8s, AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="501d18a6-8cd9-4b28-b9c2-1fee1ee7f56e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무</strong></mark><br/>- 테크 리더<br/>- 회원, 상품, 인증 도메인 담당<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="12c83e9a-5162-800f-8c98-e5825b122cd3"><div style="font-size:1.5em"><span class="icon">🗣️</span></div><div style="width:100%"><p id="d179af6b-8e64-460c-aaad-8c266e46a3f4" class=""><mark class="highlight-teal"><strong>설명</strong></mark><br/>2019년부터 개발된 서비스로 조직개편하여 2023년에 합류하게 되었고 <br/><strong>테크리더</strong> 역할 수행 중<br/>기술적 의사결정 및 팀 내 협업을 주도하고 기술공유, 레거시 전환, 인프라 전환, 모니터링 구축, 개발 문화 정립 등을 주도적으로 진행<br/></p><ol type="1" id="16683e9a-5162-802f-9d7c-dafec7a90537" class="numbered-list" start="1"><li>레거시 시스템 전환 및 버전 업데이트<ul id="18783e9a-5162-8045-8b58-d77a1b29f6a7" class="bulleted-list"><li style="list-style-type:disc">Java 8 → 17, SpringBoot 2.2 → 2.7, library, 미들웨어 버전 업데이트</li></ul></li></ol><ol type="1" id="18783e9a-5162-800c-9beb-c89f4911fcaf" class="numbered-list" start="2"><li>인증서버 구축<ul id="18783e9a-5162-807e-86b7-ecf392bc8c80" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">기존 인증구조 문제점</mark><ul id="18783e9a-5162-80a9-bc63-e761e2b42f87" class="bulleted-list"><li style="list-style-type:circle">기존 인증구조는 인증객체를 <span style="border-bottom:0.05em solid">Java 직렬화</span>해 DB, Redis에서 관리하며 Spring Security 업데이트 시 <span style="border-bottom:0.05em solid">역직렬화 문제 및 세션 무효화</span> 발생함</li></ul><ul id="18783e9a-5162-80d6-a638-f49ca9aba3db" class="bulleted-list"><li style="list-style-type:circle">세션 기반 구조로 저장소 IO 발생이 매우 많음</li></ul><ul id="18783e9a-5162-80f0-a4a5-c5b3a775b036" class="bulleted-list"><li style="list-style-type:circle">인증의 중앙화 필요성</li></ul></li></ul><ul id="18783e9a-5162-80f2-b5d0-f2ad6faa1ee9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue">개선</mark><ul id="18783e9a-5162-803e-911a-ff97c4101e2e" class="bulleted-list"><li style="list-style-type:circle"><span style="border-bottom:0.05em solid">Spring Authorization Server</span>로 인증서버 구축</li></ul><ul id="18783e9a-5162-8001-bf86-f8be9a319032" class="bulleted-list"><li style="list-style-type:circle"><span style="border-bottom:0.05em solid">JWT 기반 Stateless</span> 구조로 전환</li></ul><ul id="18783e9a-5162-80c5-896c-c59dcf196f2b" class="bulleted-list"><li style="list-style-type:circle"><span style="border-bottom:0.05em solid">피처플래그</span>를 통해 인증서버로 <span style="border-bottom:0.05em solid">점진적 전환</span> 수행</li></ul><ul id="18783e9a-5162-80e5-9772-cdc44ecd1bfd" class="bulleted-list"><li style="list-style-type:circle">인증/인가로 인한 저장소 IO 개선 → <span style="border-bottom:0.05em solid">QPS 174 → 0.7</span></li></ul></li></ul></li></ol><ol type="1" id="18783e9a-5162-80ad-a443-f71aac986d75" class="numbered-list" start="3"><li>스캐빈저(미사용 코드 제거 툴) 도입 제안<ul id="16683e9a-5162-80e6-9d3a-cb423ba9ff9d" class="bulleted-list"><li style="list-style-type:disc">스캐빈저(미사용 코드 제거 툴) 도입을 제안 및 적용<ul id="18783e9a-5162-80fd-a18d-cf2d5f031b0a" class="bulleted-list"><li style="list-style-type:circle">업데이트 및 시스템 전환 효율성 증대, 전사 도입 제안 발표 후 수상 </li></ul><ul id="18783e9a-5162-80c3-89ce-c92e7f8fd2df" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-blue"><strong><a href="https://drive.google.com/file/d/1CW-p5cAwOrtDOXkBCyuT8sw_igaR1B5D/view?usp=sharing">시상식 사진</a></strong></mark></li></ul></li></ul><ul id="18783e9a-5162-80bc-a0c3-e84cc432dd1a" class="bulleted-list"><li style="list-style-type:disc">V컬러링 기준 총 메소드 <span style="border-bottom:0.05em solid">약 50% 제거</span> (총 메소드 갯수 <span style="border-bottom:0.05em solid">35,000 → 18,000</span>)</li></ul><ul id="18783e9a-5162-8018-a18e-f0e06d03f85a" class="bulleted-list"><li style="list-style-type:disc">사내 타서비스는 <span style="border-bottom:0.05em solid">약 95% 제거</span>된 사례도 있음</li></ul></li></ol><ol type="1" id="16683e9a-5162-80b1-824d-f451d9d3e7c8" class="numbered-list" start="2"><li>컨테이너 환경 전환(Docker, Kuberentes)<ul id="16683e9a-5162-80d3-8a6e-e891a1738f38" class="bulleted-list"><li style="list-style-type:disc">VM(160대) → k8s 기반 컨테이너 전환</li></ul><ul id="16683e9a-5162-8092-bdb3-f984e99fd7bf" class="bulleted-list"><li style="list-style-type:disc">서버 비용 <span style="border-bottom:0.05em solid">효율화, 확장성, 가용성, 롤백 프로세스 간소화</span>를 위해 컨테이너 전환을 제안 및 리드</li></ul><ul id="16683e9a-5162-80e5-8891-e1900829ddca" class="bulleted-list"><li style="list-style-type:disc">기획, PM, 개발자 모두에게 k8s 도입의 장점을 설득</li></ul><ul id="18783e9a-5162-8003-b432-cbca0f684101" class="bulleted-list"><li style="list-style-type:disc">인프라 비용 현재 <span style="border-bottom:0.05em solid">30% 절감</span><ul id="18783e9a-5162-80bc-967e-f9d912c293c2" class="bulleted-list"><li style="list-style-type:circle">VM 160여대 → <span style="border-bottom:0.05em solid">VM 80여대, k8s Node 20여대</span>)</li></ul><ul id="18783e9a-5162-80a5-8ed7-d602cce0b21f" class="bulleted-list"><li style="list-style-type:circle">모든 서비스 k8s로 옮기는 작업 진행중</li></ul></li></ul><ul id="18783e9a-5162-80c1-8108-eee77b8479ab" class="bulleted-list"><li style="list-style-type:disc">서비스 배포 속도 향상 및 안정성 강화<ul id="18783e9a-5162-8092-acb0-e63165a6c458" class="bulleted-list"><li style="list-style-type:circle">월 1회 배포 → <span style="border-bottom:0.05em solid">수시 배포</span></li></ul></li></ul><ul id="16683e9a-5162-8016-b55b-f082275678d8" class="bulleted-list"><li style="list-style-type:disc">팀 내 k8s 교육 및 정착<ul id="16683e9a-5162-8033-a78e-c29c5bbbe671" class="bulleted-list"><li style="list-style-type:circle">주 2시간씩 3개월간 개인학습, 과제 및 실습, 스터디를 진행하여 팀 전체가 k8s를 숙지할 수 있도록 주도</li></ul><ul id="16683e9a-5162-80db-b776-fcda7a21674d" class="bulleted-list"><li style="list-style-type:circle">k8s 운영 가이드를 문서화하여 신규 입사자 혹은 다른 팀도 쉽게 적용할 수 있도록 공유</li></ul></li></ul><ul id="16683e9a-5162-8092-bfa3-fa62d1f728d4" class="bulleted-list"><li style="list-style-type:disc">점진적 트래픽 전환<ul id="16683e9a-5162-80cd-aed0-c019461780e7" class="bulleted-list"><li style="list-style-type:circle">피처플래그를 이용해 API 트래픽을 <span style="border-bottom:0.05em solid">1~100%까지 점진적</span>으로 전환</li></ul><ul id="16683e9a-5162-80dc-92b3-ccb296c12d1b" class="bulleted-list"><li style="list-style-type:circle">내부 사용자 그룹 → 점진적 외부 전환 과정을 거쳐 VM 종료 및 k8s 노드/파드를 확장하여 안정적인 마이그레이션 달성</li></ul></li></ul></li></ol><ol type="1" id="16683e9a-5162-80da-91d8-ca9cd6aa56b9" class="numbered-list" start="4"><li>모니터링 시스템 구축<ul id="16683e9a-5162-80d0-880a-f725bacd1ed5" class="bulleted-list"><li style="list-style-type:disc">APM(Pinpoint) 도입<ul id="16683e9a-5162-80b9-a000-eb9bd2a83c80" class="bulleted-list"><li style="list-style-type:circle">기존에 Scouter를 활용한 성능 모니터링 및 장애 추적의 어려움으로 인해 문제 대응이 지연</li></ul><ul id="16683e9a-5162-80fd-b7ea-d90a9ce98d3f" class="bulleted-list"><li style="list-style-type:circle">Pinpoint를 통해 Scouter의 단점을 상쇄하고 트랜잭션 단위 추적 및 실시간 성능 모니터링 환경 조성</li></ul><ul id="16683e9a-5162-8090-8f27-d345803b5cc0" class="bulleted-list"><li style="list-style-type:circle">팀원 대상 사용법과 주요 기능을 교육해 장애 대응 역량 강화</li></ul></li></ul><ul id="16683e9a-5162-80c5-83f3-c25843ad8337" class="bulleted-list"><li style="list-style-type:disc">Prometheus, Loki, Grafana 도입<ul id="16683e9a-5162-8096-b210-c5803990c849" class="bulleted-list"><li style="list-style-type:circle">매트릭/로그 수집 및 가시화하여 실시간 모니터링 대시보드 구축</li></ul><ul id="16683e9a-5162-8018-a48d-f1e5bab62310" class="bulleted-list"><li style="list-style-type:circle">자체 개발 알림서버(Webhook 기반)로 사내 메신저 연동</li></ul></li></ul></li></ol><ol type="1" id="16683e9a-5162-804f-8b1e-e778e927b208" class="numbered-list" start="5"><li>개발 문화 정립<ul id="16683e9a-5162-8080-811b-ec88e4dc6d98" class="bulleted-list"><li style="list-style-type:disc">코드 리뷰 프로세스<ul id="16683e9a-5162-807f-b29f-ea464f7b5a92" class="bulleted-list"><li style="list-style-type:circle">코드 품질 및 협업 효율성 향상</li></ul></li></ul><ul id="16683e9a-5162-80ad-afd2-ccbd5b995412" class="bulleted-list"><li style="list-style-type:disc">코드 컨벤션 정립 및 공유<ul id="16683e9a-5162-803a-abf5-d3c2b14a34bf" class="bulleted-list"><li style="list-style-type:circle">프로젝트 전반에 일관성 있고 유지보수성 높은 코드 작성 문화 형성</li></ul><ul id="16683e9a-5162-801b-bccb-deeb06091916" class="bulleted-list"><li style="list-style-type:circle">컨벤션 문서를 Wiki에 정리해 놓고 지속적 의견 제시 및 개선</li></ul></li></ul><ul id="16683e9a-5162-80b6-b351-c12c518907b7" class="bulleted-list"><li style="list-style-type:disc">정기 코드리뷰 세션 주관<ul id="16683e9a-5162-8038-ba94-f09a2e4a2c81" class="bulleted-list"><li style="list-style-type:circle">코드 작성자가 직접 맥락을 설명하면서 피드백 순환 활성화</li></ul><ul id="16683e9a-5162-80a8-9421-c2a84dcf70d8" class="bulleted-list"><li style="list-style-type:circle">다른 도메인 비즈니스를 이해하고, 팀 내 기술적 커뮤니케이션을 강화</li></ul></li></ul></li></ol></div></figure><p id="12c83e9a-5162-80b8-867e-ec214bd7aefd" class="">
+</p><p id="90006216-4f00-48ee-a516-7f23d2156a3a" class=""><strong><span style="border-bottom:0.05em solid">BaaS(Battery as a Service) 플랫폼</span></strong><span style="border-bottom:0.05em solid"><br/><br/></span>전기차 충전시 충전데이터를 수집하여 배터리 상태 모니터링과 다양한 지표를 사용자에게 제공하는 서비스<br/>📅 <br/><mark class="highlight-gray"><em>2022.06 ~ 2023.01</em></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="265871cd-7c29-4ee9-bf0f-e0a14283834e"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java, Kotlin<br/>프레임워크: Spring Boot, Spring Data JPA, Spring Batch, Spring Security, Spring Cloud Gateway<br/>DB 및 메시징: MariaDB, Cosmos DB, Event Hub<br/>인프라: Azure, Azure DevOps, AKS,  Docker, Keycloak<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="68e0ceec-4bac-4859-94b6-201bb9f43881"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무</mark></strong><br/>- Azure AKS, DevOps Pipeline 구성<br/>아키텍처 구성<br/>인증서버(keycloak) 구성<br/>전기차 충전기 간편진단 API 개발<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16683e9a-5162-80a3-8156-fe8b6d6db93f"><div style="font-size:1.5em"><span class="icon">🗣️</span></div><div style="width:100%"><p id="3f89c91c-0f5b-40c6-89d5-eeaf798f0f78" class=""><mark class="highlight-teal"><strong>설명</strong></mark></p><ol type="1" id="acb02e7b-fd41-4d4b-9e1c-9914be67bfa5" class="numbered-list" start="1"><li>Azure AKS 기반 아키텍처 및 DevOps 파이프라인 구성<ul id="16683e9a-5162-80a6-8dc2-e367998e4df0" class="bulleted-list"><li style="list-style-type:disc">k8s를 개인적으로 학습한 내용을 바탕으로 Azure DevOps를 활용해 CI/CD 자동화 파이프라인 설계</li></ul><ul id="16683e9a-5162-8085-89d2-cb029ba7ae9e" class="bulleted-list"><li style="list-style-type:disc">인프라 프로비저닝, 모니터링, 롤백 전략 등을 고려하여 안정적인 배포 환경 구현</li></ul></li></ol><ol type="1" id="16683e9a-5162-809f-8df6-d932340d4859" class="numbered-list" start="2"><li>인증 서버(Keycloak) 구성<ul id="16683e9a-5162-80ca-80e3-c736b9041f88" class="bulleted-list"><li style="list-style-type:disc">인증 서버 구축이 필요해 빠르게 구성 가능한 Keycloak을 활용</li></ul></li></ol><ol type="1" id="16683e9a-5162-80b3-8d0f-cb17ab51f4de" class="numbered-list" start="3"><li>전기차 충전기 간편진단 API 개발<ul id="16683e9a-5162-805e-943e-f3f89fba8693" class="bulleted-list"><li style="list-style-type:disc">전기차 충전 데이터를 충전중에 실시간으로 수집하여 ML서버로 전달</li></ul><ul id="16683e9a-5162-8059-8454-fe6f1e2b3554" class="bulleted-list"><li style="list-style-type:disc">ML서버가 충전 데이터를 기반으로 배터리를 진단한 데이터를 제공</li></ul></li></ol><ol type="1" id="16683e9a-5162-80e7-abda-c4421c549b46" class="numbered-list" start="4"><li>클린 아키텍처 도입 및 사내 공용 라이브러리 활용<ul id="16683e9a-5162-8043-950f-f7ee7a9a1dea" class="bulleted-list"><li style="list-style-type:disc">기존에 작성해둔 ExceptionHandler, File Uploader 라이브러리를 도입 및 가이드</li></ul><ul id="16683e9a-5162-8049-b7f9-da1ee606d773" class="bulleted-list"><li style="list-style-type:disc">클린 아키텍처 지향을 제안하고 예제 코드를 통해 팀원들과 공유 및 적용</li></ul><ul id="16683e9a-5162-80f0-a54d-e71add201c80" class="bulleted-list"><li style="list-style-type:disc">모듈 단위 책임 분리를 통해 유지보수성과 확장성을 높이는 데 주력</li></ul></li></ol><ol type="1" id="16683e9a-5162-8078-a0a6-f6542c701c8d" class="numbered-list" start="5"><li>CES 2023 출품<ul id="16683e9a-5162-80d7-a7f4-e37b61b3a69b" class="bulleted-list"><li style="list-style-type:disc">충전기 사업자와의 제휴를 통해 서비스 범위를 지속적으로 확장 중</li></ul></li></ol></div></figure><p id="6f19539d-c9cc-47fe-afc3-d81d597bc601" class="">
+</p><p id="683aaee7-d532-4517-92d4-0ad247817166" class=""><strong><span style="border-bottom:0.05em solid">스마트병원<br/><br/></span></strong>환자, 의료진, 보호자간 화상통화 서비스와 병원정보와 의료정보를 TV 셋탑박스에 설치된 앱을 통해 제공되는 서비스<br/>📅 <br/><mark class="highlight-gray"><em>2021.11 ~ 2022.05</em></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="42227298-91c3-46d9-8e52-d4f53f54c3b3"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java, JavaScript, TypeScript<br/>프레임워크: Spring Boot, Spring Data JPA, Spring Security, Spring Cloud Eureka, mediasoup<br/>DB 및 메시징: MySQL, RabbitMQ<br/>인프라: IDC, Ubuntu<br/>기타: WebRTC, Node.js, Stomp<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a56a997e-d0fb-4086-93bf-a6031b305e48"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무</mark></strong><br/>IDC 인프라 및 CI/CD 구성<br/>아키텍처 구성<br/>환자, 의료진, 보호자 회원 연동<br/>Spring Security Oauth2기반 인증/인가 모듈 개발<br/>병원 API 협의 및 연동<br/>병원 API 클라이언트 모듈 개발<br/>Admin API, 화상진료/면회 API 개발<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="020642d5-5db2-47a4-942a-b0c373c45629"><div style="font-size:1.5em"><span class="icon">🗣️</span></div><div style="width:100%"><mark class="highlight-teal"><strong>설명</strong></mark><ol type="1" id="16683e9a-5162-8083-ac7b-c576f5dac031" class="numbered-list" start="1"><li>바로 직전 프로젝트에서 설계한 스마트워크의 화상통화 기능 VM 10대로 이중화 고려하여 축소 구축</li></ol><ol type="1" id="16683e9a-5162-8091-b24c-d1467d3fe315" class="numbered-list" start="2"><li>병원 시스템과 연동할 아키텍처 설계</li></ol><ol type="1" id="16683e9a-5162-80aa-9804-c935c7183f25" class="numbered-list" start="3"><li>Spring Security Oauth2 기반 인증/인가 모듈 개발<ul id="16683e9a-5162-808f-91c2-e03df50453a0" class="bulleted-list"><li style="list-style-type:disc">환자/의료진/보호자 계정 체계 통합 및 권한별 접근 정책 수립</li></ul></li></ol><ol type="1" id="16683e9a-5162-8032-8ab2-f5fd4215c724" class="numbered-list" start="4"><li>병원에서 제공되는 API개발이 늦어져서 Mock 서버 구성하여 개발 가능 API 선작업<ul id="18783e9a-5162-8050-8256-e1cd8da5367d" class="bulleted-list"><li style="list-style-type:disc">예상과 다른 API 규격은 중간 프록시 서버에서 RESTful 형식으로 변환</li></ul></li></ol><ol type="1" id="16683e9a-5162-8094-ad70-efae0ac223e2" class="numbered-list" start="5"><li>병원 API의 부하(수용가능 TPS 10 미만)을 해결하기 위해 Rate Limit &amp; Cache 적용, 서버 안정성 확보</li></ol><p id="16683e9a-5162-800f-b580-f1abdee7155c" class=""><mark class="highlight-blue"><strong><a href="https://drive.google.com/file/d/1hTdsQfZXdHx6l58ZF2QQtdZO9MPV_-DK/view">사내 프로젝트 소개 및 후기</a></strong></mark></p></div></figure><p id="1a00a76c-8175-4517-82f0-147e2b2c68ea" class="">
+</p><p id="0caefc7c-9bce-4428-962f-05836182f928" class=""><strong><span style="border-bottom:0.05em solid">스마트워크<br/><br/></span></strong>Slack, MS Teams 같은 팀 협업 도구(파일럿 프로젝트)<br/>📅 <br/><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2021.03 ~ 2021.10</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c1e971f1-2fc4-4df6-81e0-b323fb097c0a"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java, JavaScript, TypeScript<br/>프레임워크: Spring Boot, Node.js, Spring Data JPA, Spring Security, mediasoup, React<br/>DB 및 메시징: MySQL, Redis, RabbitMQ<br/>인프라: Azure, AKS, Azure DevOps<br/>기타: WebRTC, Node.js, Stomp, Keycloak, k8s, Docker, Jenkins<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d824b689-b565-4328-9ee9-ec5f71e694bb"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무</strong></mark><br/>- Azure 인프라, AKS 및 DevOps Pipeline 구성<br/>- 아키텍처 설계 및 구성<br/>- Keycloak, Spring Security Oauth2기반 인증/인가 개발<br/>- 미디어 서버는 일반적인 메트릭 수치로 스케일링이 불가능해 Producer/Consumer 기준으로 서버 스케일링, 디스커버리 할 수 있도록 컨트롤러를 개발하였고 WebRTC proxy 개발<br/>- Admin, 대시보드 개발<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="15183e9a-5162-80f5-8f1a-d3f379b130bd"><div style="font-size:1.5em"><span class="icon">🗣</span></div><div style="width:100%"><p id="3f995b9b-d650-4a23-87c2-e0c23740d25d" class=""><mark class="highlight-teal"><strong>설명</strong></mark></p><ol type="1" id="16683e9a-5162-8009-9c89-cfa817d189d1" class="numbered-list" start="1"><li>Azure 인프라 &amp; DevOps 파이프라인 구성<ul id="16683e9a-5162-80ab-b8c6-f2d8baadea67" class="bulleted-list"><li style="list-style-type:disc">Azure 클라우드 기반 AKS(k8s 클러스터)환경 구축</li></ul><ul id="a2e5f0fd-f12c-45e0-9926-efc88d496bea" class="bulleted-list"><li style="list-style-type:disc">Azure DevOps를 통한 CI/CD 자동화 파이프라인 설계 및 운영</li></ul></li></ol><ol type="1" id="16683e9a-5162-803d-81cb-d6100d9a4319" class="numbered-list" start="2"><li>아키텍처 설계 및 구성<ul id="16683e9a-5162-80cb-ada1-ce512d78cacb" class="bulleted-list"><li style="list-style-type:disc">WebRTC + Mediasoup 기반 화상통화 기능 설계</li></ul><ul id="16683e9a-5162-80fd-9893-dfdd224e44db" class="bulleted-list"><li style="list-style-type:disc">Keycloak + Spring Security Oauth2 기반 사용자 인증/인가 모듈 개발</li></ul></li></ol><ol type="1" id="16683e9a-5162-807f-9eb3-d322baed9828" class="numbered-list" start="3"><li>미디어 서버 확장성 확보<ul id="16683e9a-5162-8007-bf73-e6c6e35cecad" class="bulleted-list"><li style="list-style-type:disc">일반적인 CPU/메모리 기준 스케일링이 아닌 Producer/Consumer 수를 기반으로 동적으로 스케일 인/아웃</li></ul><ul id="16683e9a-5162-8026-9d97-c6a21391ecdf" class="bulleted-list"><li style="list-style-type:disc">미디어 서버/사용자(Producer, Consumer) 정보를 레지스트리 서버를 통해 등록/조회 → 컨트롤러 서버에서 프록시 및 로드밸런싱 수행</li></ul><ul id="16683e9a-5162-801c-bc83-fe2f7c731102" class="bulleted-list"><li style="list-style-type:disc">WebRTC Proxy를 직접 개발하여 클라이언트와 미디어 서버 간 안정적 연결 지원</li></ul><ul id="18783e9a-5162-8062-bd58-c08ad5cac028" class="bulleted-list"><li style="list-style-type:disc">Producer, Consumer의 한계치에 도달하면 자동으로 서버 스케일 인/아웃 수행</li></ul></li></ol><ol type="1" id="16683e9a-5162-80a4-9e33-d64e46c4c639" class="numbered-list" start="4"><li>Admin &amp; 대시보드 개발<ul id="16683e9a-5162-80b7-93c6-fd9433ea2d04" class="bulleted-list"><li style="list-style-type:disc">Mediasoup에서 제공하는 각종 매트릭과 레지스트리 서버 데이터를 통합하여 운영 대시보드 구성</li></ul><ul id="16683e9a-5162-8011-b4a3-e4fd9ecf0e8b" class="bulleted-list"><li style="list-style-type:disc">관리자 화면을 통해 서버 상태, 사용자 연결 현황, 채널 관리 등 운영 기능 제공</li></ul></li></ol></div></figure><p id="18783e9a-5162-8088-9ac0-f64a7fb96602" class="">
+</p><h3 id="18783e9a-5162-8042-bb75-f4ae9ed37456" class="">🏢 SK엔카닷컴</h3><p id="18783e9a-5162-800f-b83c-eac9b8ae3c0f" class=""><strong><span style="border-bottom:0.05em solid">주문결제 레거시 개선<br/><br/></span></strong>오라클 Procedure로 구성되어 있는 주문 결제 시스템을 API 환경으로 전환<br/>📅 <br/><em><mark class="highlight-gray"><span style="border-bottom:0.05em solid">2019.11 ~ 2020.01</span></mark></em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="18783e9a-5162-807c-bd83-e35017e9c568"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java 11<br/>프레임워크: Spring Boot 2.x, Spring Data JPA<br/>DB 및 메시징: Oracle, Redis, RabbitMQ<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="18783e9a-5162-80f7-89b3-c32f1365dfcc"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무<br/><br/></strong></mark><strong>-</strong><mark class="highlight-teal"><strong> </strong></mark>모놀리식으로 구성된 환경을 상품, 주문, 결제, 지급을 도메인 별로 분리하여 서로 API를 통해 비즈니스 로직이 수행되도록 개발<br/>- Procedure를 호출하는 부분은 장애를 대비하여 Consul을 통해 설정 변경만으로 API와 기존 Procedure 호출 분기<br/>- 주문 결제 도메인 분리 및 Procedure를 API로 전환<br/>- 상품, 지급, 적용 도메인에서 사용될 주문 API 설계 및 개발<br/>- 공통코드, 가격정보, 상품정보 등의 데이터 캐시 적용<br/>- ELK로 로그 관리되도록 구성<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="18783e9a-5162-803f-818a-db078c8dbe60"><div style="font-size:1.5em"><span class="icon">🗣</span></div><div style="width:100%"><p id="18783e9a-5162-8051-9982-db0c4ad544a4" class=""><mark class="highlight-teal"><strong>설명</strong></mark></p><ol type="1" id="18783e9a-5162-8003-aea6-c987a2abcffa" class="numbered-list" start="1"><li>모놀리식 환경 → 도메인 분리 및 API 전환<ul id="18783e9a-5162-8085-a756-d61b1fdaf0fd" class="bulleted-list"><li style="list-style-type:disc">상품, 주문, 결제, 지급 등 프로시저가 뒤섞여 있던 로직을 도메인 단위로 분리</li></ul><ul id="18783e9a-5162-80fa-93f7-cb10149f2845" class="bulleted-list"><li style="list-style-type:disc">각 도메인 간에는 API 호출을 통해 비즈니스 로직을 수행하도록 구조 재설계</li></ul><ul id="18783e9a-5162-808e-98d1-de57bf401430" class="bulleted-list"><li style="list-style-type:disc">프로시저 호출 로직은 Consul 설정을 통해 신/구(프로시저/API)전환이 가능하도록 구현</li></ul></li></ol><ol type="1" id="18783e9a-5162-806c-90a6-d4ac7707caf6" class="numbered-list" start="2"><li>분산 트랜잭션 처리(Saga 패턴 적용)<ul id="18783e9a-5162-808d-ac08-c23015379bfc" class="bulleted-list"><li style="list-style-type:disc">하나의 프로시저로 처리되던 로직이 여러 서비스로 분리되면서 트랜잭션 일관성 문제가 발생</li></ul><ul id="18783e9a-5162-8085-b9e1-ecbcc0b2ebbe" class="bulleted-list"><li style="list-style-type:disc">분산 트랜잭션 기법을 검토한 끝에 Saga 패턴(오케스트레이션 없는 이벤트 기반) 도입</li></ul><ul id="18783e9a-5162-80e8-b091-e152c8415148" class="bulleted-list"><li style="list-style-type:disc">각 단계마다 발생할 수 있는 오류 대비를 위해 롤백 API 목록을 ThreadLocal, 큐 등에 저장 후 문제 발생 시 역순으로 롤백 실행</li></ul></li></ol><ol type="1" id="18783e9a-5162-8072-8787-c3b8e96c0841" class="numbered-list" start="3"><li>캐시/로그 관리 체계 고도화<ul id="18783e9a-5162-80bd-a19a-cc52fe397013" class="bulleted-list"><li style="list-style-type:disc">공통코드, 가격정보, 상품정보 등 빈번히 참조되나 변경이 드문 데이터에 Redis 캐시 적용</li></ul><ul id="18783e9a-5162-80d3-a5c7-e72d3cf5ef09" class="bulleted-list"><li style="list-style-type:disc">ELK(Elasticsearch, Logstash, Libana) 기반 로그 관리 구성</li></ul></li></ol><ol type="1" id="18783e9a-5162-8056-b166-eb045385e5d0" class="numbered-list" start="4"><li>CI/CD 및 운영 효율 강화<ul id="18783e9a-5162-8077-80c9-ffb23c855b9d" class="bulleted-list"><li style="list-style-type:disc">Spring Cloud Consul에서 제공하는 Key-Value Store를 통해 실시간 피처플래그 처럼 프로시저/API 전환 가능</li></ul><ul id="18783e9a-5162-80d4-ae66-fa866be63085" class="bulleted-list"><li style="list-style-type:disc">API 장애 발생 시 자동으로 기존 프로시저로 Failover</li></ul></li></ol><ol type="1" id="18783e9a-5162-80cd-bf85-c0c9503f6eaa" class="numbered-list" start="5"><li>주요 효과<ul id="18783e9a-5162-80b8-b701-ea9b51e737e2" class="bulleted-list"><li style="list-style-type:disc">신규 상품 추가 시 개발 공수 평균 20일 → 5일로 대폭 단축</li></ul><ul id="18783e9a-5162-80cc-83e0-f71d4b9e50fd" class="bulleted-list"><li style="list-style-type:disc">프로시저 복잡도와 디버깅의 불편함으로 인한 이슈 파악 어려움 해결</li></ul><ul id="18783e9a-5162-80ae-b0e6-dd8dc99ea677" class="bulleted-list"><li style="list-style-type:disc">신규 입사자도 도메인 단위 API를 빠르게 이해하여 개발 가능 </li></ul></li></ol></div></figure><p id="18783e9a-5162-8047-8581-f7fe156fd7f6" class="">
+</p><p id="18783e9a-5162-80aa-9fc8-c0673a390928" class=""><strong><span style="border-bottom:0.05em solid">엔카닷컴 이미지 파일 저장소 개선<br/><br/></span></strong>NAS로 저장되어 서비스 되던 파일들을 AWS S3로 이관<br/>📅 <br/><em><mark class="highlight-gray"><span style="border-bottom:0.05em solid">2019.06 ~ 2019.07</span></mark></em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="18783e9a-5162-80c3-9f0b-fea57000d0c6"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: Spring Boot<br/>인프라: AWS S3, AWS Lambda, AWs CloudFront<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="18783e9a-5162-80e2-8fbf-f0dcbf7ebe58"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무<br/><br/></strong></mark><strong>-</strong><mark class="highlight-teal"><strong> </strong></mark>AWS SDK로 S3파일 관리 API 설계 및 개발<br/>- 클라이언트에 파일 업로드 영역 새로 개발된 S3 업로드 API를 사용하도록 변경<br/>- Lambda Edge를 사용해 이미지 편집 기능 구현<br/>- CloudFront로 S3와 Lambda Edge 함수 트리거, 캐시 환경 구성<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="18783e9a-5162-80bd-8fb5-e5002693be69"><div style="font-size:1.5em"><span class="icon">🗣</span></div><div style="width:100%"><p id="18783e9a-5162-808a-b70c-e2e7648eef94" class=""><mark class="highlight-teal"><strong>설명</strong></mark></p><ol type="1" id="18783e9a-5162-80a6-a244-d3917e8005f3" class="numbered-list" start="1"><li>AWS S3 전환 및 업로드 API 개발<ul id="18783e9a-5162-8084-8adf-cffaf823e085" class="bulleted-list"><li style="list-style-type:disc">AWS SDK를 활용해 S3 파일 관리 API 설계 및 구현</li></ul><ul id="18783e9a-5162-8036-8b71-eaa78a4299dc" class="bulleted-list"><li style="list-style-type:disc">기존 NAS 디렉토리 구조를 유지하여 파일 이관에 대한 변경 부담 최소화</li></ul><ul id="18783e9a-5162-8006-8010-cdcfb038cfaa" class="bulleted-list"><li style="list-style-type:disc">전환 완료 전까지는 NAS와 S3에 동시 업로드 되는 구조로 무중단 전환 실현</li></ul></li></ol><ol type="1" id="18783e9a-5162-8092-8e92-ef347b4a6fd0" class="numbered-list" start="2"><li>Lambda@Edge + CloudFront 기반 이미지 편집/캐싱<ul id="18783e9a-5162-80ac-aac1-cd412a21eaf0" class="bulleted-list"><li style="list-style-type:disc">Lambda@Edge를 이용해 이미지 리사이즈, 크롭 등 동적 처리 기능 구현</li></ul><ul id="18783e9a-5162-8090-873f-c2b23433cdc9" class="bulleted-list"><li style="list-style-type:disc">CloudFront 캐시로 리사이즈된 이미지 효율적으로 제공</li></ul><ul id="18783e9a-5162-8009-886a-d41a813ec07b" class="bulleted-list"><li style="list-style-type:disc">원본 이미지만 업로드해도 자동으로 다양한 사이즈의 이미지를 생성 및 제공</li></ul></li></ol><ol type="1" id="18783e9a-5162-8060-829a-e97df7126967" class="numbered-list" start="3"><li>비용 절감 전략<ul id="18783e9a-5162-80b6-b16a-d2249ab5d025" class="bulleted-list"><li style="list-style-type:disc">전체 이미지를 한 번에 이관할 경우 연 3천만원 이상의 비용 발생 예상</li></ul><ul id="18783e9a-5162-8040-afad-cd6fd1e06ef0" class="bulleted-list"><li style="list-style-type:disc">트래픽 높은 특정 페이지를 우선 적용하여 연 60만원 수준으로 우선 운영하도록 제안</li></ul></li></ol><ol type="1" id="18783e9a-5162-8031-a19f-c39a5d0255cf" class="numbered-list" start="4"><li>운영 및 유지보수 효율 향상<ul id="18783e9a-5162-8062-add1-d8a611ae9dcd" class="bulleted-list"><li style="list-style-type:disc">NAS 대비 가용성과 확장성 높은 S3, CDN 환경 도입</li></ul><ul id="18783e9a-5162-8039-beec-e2f8a61b00b3" class="bulleted-list"><li style="list-style-type:disc">이미지 파일 편집 및 캐싱 자동화로 서비스 응답속도 개선 및 부하 분산</li></ul><ul id="18783e9a-5162-80f0-93a4-e0a84f441468" class="bulleted-list"><li style="list-style-type:disc">클라이언트에서 이미지 로딩 속도 향상 (CDN + 이미지 리사이징)</li></ul><ul id="18783e9a-5162-8084-8dad-d98f91e3a5cf" class="bulleted-list"><li style="list-style-type:disc">전송/저장 비용을 최적화하여 비용 효율성을 높임</li></ul><ul id="18783e9a-5162-8016-85c3-f170c16cdb66" class="bulleted-list"><li style="list-style-type:disc">개발자/운영자 입장에서 파일 이관/운영이 단순화, 관리 포인트 감소</li></ul></li></ol></div></figure><p id="18783e9a-5162-80cd-bbbe-e1145397a6f3" class="">
+</p><p id="18783e9a-5162-807e-9741-c6f019a7a898" class="">
+</p><h3 id="18783e9a-5162-8064-bd92-f513a02d0bde" class=""><span style="border-bottom:0.05em solid">그 외 수행 프로젝트</span></h3><h3 id="18783e9a-5162-8028-bf64-cac63344f800" class="">🏢 <strong>SK플래닛</strong></h3><p id="53637cce-b20a-4782-92d5-31f34ef728e8" class=""><strong><span style="border-bottom:0.05em solid">실버프랜드</span></strong><br/>인공지능 스피커 Nugu 기반의 노인 케어 서비스<br/>📅 <br/><mark class="highlight-gray"><em><span style="border-bottom:0.05em solid">2020.07 ~ 2021.02</span></em></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a98f0cdd-c93e-4b2f-96b8-a06dbc75c45f"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java<br/>프레임워크: Spring Boot, Spring Data JPA,<br/>DB 및 메시징: MySQL, RabbitMQ<br/>인프라: IDC<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0e3ef13f-0524-4a48-bb16-7f52cb70aa47"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무<br/><br/></strong></mark>- IDC 인프라, CI/CD, 모니터링 구성<br/>- 즉시알림, 예약알림, 알림 재발송 등 설정, 전송 모듈 개발<br/>- 알림관련 기능이 필요한 서비스에 적용할 수 있도록 모듈화 진행<br/>- Nugu 스피커를 통해 발화 시 각각의 지시를 수행하는 API 개발<br/>- Admin 알림 수신 여부, 오류, 재발송 API 개발<br/></div></figure><h3 id="bc62c180-cc1f-4a8d-b516-559d85204d61" class="">🏢 SK엔카닷컴</h3><p id="18ad6098-7d6d-4401-9128-b16aa011a35c" class=""><strong><span style="border-bottom:0.05em solid">비교견적 후기 개선<br/><br/></span></strong>내차에 대한 여러 견적을 받아 비교하여 판매하는 서비스의 후기 콘텐츠 강화<br/>📅 <br/><em><mark class="highlight-gray"><span style="border-bottom:0.05em solid">2020.03 ~ 2020.05</span></mark></em></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="03a8110f-1eb3-47cd-9237-728d1ee7a7f0"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java<br/>프레임워크: Spring Boot<br/>라이브러리: Spring Data JPA<br/>DB: Oracle<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="08dd00af-dc6e-4d2a-9277-421d7f88e515"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무</mark></strong><br/>- 판매자, 딜러, 관리자의 후기 API 설계 및 개발<br/></div></figure><p id="39402ced-63f0-4d5e-acc4-e7caf3713ba0" class="">
+</p><p id="c80a4a96-8825-48f4-abe9-41d9e1131f23" class=""><strong><span style="border-bottom:0.05em solid">엔카닷컴 백오피스 레거시 개선</span></strong><br/>📅 <br/><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2020.02</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="52cd4d28-6a33-4b90-9057-9093ff7bedcb"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: Spring Boot<br/>라이브러리: MyBatis<br/>DB: Oracle<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="055263d3-81a4-44e0-903e-a177dfdecbe7"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무<br/><br/></strong></mark><strong>-</strong><mark class="highlight-teal"><strong> </strong></mark>Spring 2.x에서 Spring Boot 2.x로 마이그레이션<br/>- AWS Elastic Beanstalk, Bamboo로 CI/CD 구성<br/>- Gradle 적용<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="14e83e9a-5162-80e4-a3cf-f2af84125b5e"><div style="font-size:1.5em"><span class="icon">🗣</span></div><div style="width:100%"><p id="deae3507-efef-4fb2-bce5-91eee395ab35" class=""><mark class="highlight-teal"><strong>설명</strong></mark></p><ol type="1" id="16683e9a-5162-8067-9f89-cbb65d50c83f" class="numbered-list" start="1"><li>Spring 2.x → Spring Boot 2.x(Spring 5.x) 마이그레이션<ul id="16683e9a-5162-80cb-9a0e-ee683d0e97f2" class="bulleted-list"><li style="list-style-type:disc">큰 변경점들을 우선적으로 해결해서 버전부터 올리고 코드레벨 개선은 추후에 진행 계획</li></ul><ul id="16683e9a-5162-8016-a5f5-f52857c3fbab" class="bulleted-list"><li style="list-style-type:disc">Tiles2 → Tiles3로 전환</li></ul><ul id="16683e9a-5162-80dc-a138-c6266bc5adeb" class="bulleted-list"><li style="list-style-type:disc">iBatis → MyBatis 전환(MyBatis 컨버팅 툴 활용)</li></ul><ul id="16683e9a-5162-8043-9299-c070b3c28699" class="bulleted-list"><li style="list-style-type:disc">MultiActionController 제거 후 RequestMapping 어노테이션 기반 구조로 개선</li></ul><ul id="16683e9a-5162-804f-98c2-d2057a86eeed" class="bulleted-list"><li style="list-style-type:disc">XML 기반 Bean/DI 설정 → Java Configuration으로 변경</li></ul></li></ol><ol type="1" id="16683e9a-5162-8091-9562-e023390128bf" class="numbered-list" start="2"><li>CI/CD 파이프라인 구성<ul id="16683e9a-5162-804a-86d5-f37566d6c1b1" class="bulleted-list"><li style="list-style-type:disc">AWS Elastic Beanstalk과 Atlassian Bamboo를 활용해 CI/CD 구축</li></ul><ul id="16683e9a-5162-8059-a098-fa9bfe335c1b" class="bulleted-list"><li style="list-style-type:disc">Gradle 적용</li></ul></li></ol><ol type="1" id="16683e9a-5162-8016-8ae6-f244c1f44acd" class="numbered-list" start="3"><li>외부 라이브러리 및 코드 전반 업데이트<ul id="16683e9a-5162-8011-989e-fd6b090f498b" class="bulleted-list"><li style="list-style-type:disc">Spring Boot 2.x와 호환되지 않는 라이브러리 버전 상향 조정</li></ul><ul id="16683e9a-5162-8099-9344-db366990289d" class="bulleted-list"><li style="list-style-type:disc">코드 호환성 테스트 및 디펜던시 충돌 해결</li></ul></li></ol></div></figure><p id="daf8ac73-976a-4ae9-8df3-4a1afb7a201d" class="">
+</p><p id="ec2a9d0a-ded0-406d-b436-ae1e84e57aa0" class=""><strong><span style="border-bottom:0.05em solid">비대면 한도조회 이용자 차량 추천 서비스<br/><br/></span></strong>금융 서비스인 비대면 대출 한도조회 시 사용자의 대출한도 금액에 따른 차량 추천 서비스<br/>📅 <br/><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2019.08 ~ 2019.10</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c60f3ab3-741c-42fa-b131-ac4691cb37e4"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: Spring Boot, Spring Data JPA<br/>저장소: Oracle<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="39c42ca5-e94c-47b8-ba09-6d6f2fed1bc4"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong><strong>-</strong><strong><mark class="highlight-teal"> </mark></strong>차량 대표 이미지 API 개발<br/>- 대출 한도에 따른 차량 매물 리스트 API 개발<br/></div></figure><p id="ad35ce28-2f49-4f47-ab68-0bb70319d22e" class="">
+</p><p id="d9c627ee-2905-4575-87c4-4efeb8a97b60" class=""><span style="border-bottom:0.05em solid"><strong>진단 상품 개선<br/><br/></strong></span>진단 차량 광고형태 개선<br/>📅 <br/><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2019.02 ~ 2019.05</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="135f777b-33b1-49cf-a0e2-90298539af96"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: PostgreSQL<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d7e4439d-61a8-43e8-bbb6-9bcc97575a9d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong><strong>-</strong><strong><mark class="highlight-teal"> </mark></strong>차량 추천 포인트, 추천 옵션 API 설계 및 개발<br/>- 진단차량 광고 화면 개발<br/></div></figure><p id="bf925d59-3435-4482-be14-b6aef93ac218" class="">
+</p><p id="1eea9243-bf73-4640-a2fc-008f8c747783" class=""><span style="border-bottom:0.05em solid"><strong>EV POST<br/><br/></strong></span>전기차, 친환경차 관련 정보 제공 서비스<br/>📅 <br/><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2018.11 ~ 2019.01</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="180635c1-250c-4154-97c3-fb8073e28c72"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: PostgreSQL<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ce4a7438-76a7-49c3-a86c-4bbb531b8ed8"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong><strong>-</strong><strong><mark class="highlight-teal"> </mark></strong>EV POST 배너 관리 API 설계 및 개발<br/>- 엔카 전기차 상품 리스팅과 상황별 EV POST 배너 노출 개발<br/></div></figure><p id="9667cfe1-5a95-4409-9526-62a67d96c4cd" class="">
+</p><p id="c8d499b3-03ae-44e8-86dc-2fc932d9dddc" class=""><span style="border-bottom:0.05em solid"><strong>엔카매거진 레거시 개선<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2018.05 ~ 2018.10</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c8bfc16f-fadb-4538-bc3f-96b31ee24c68"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: MariaDB, Redis<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="fa309dac-8114-42ba-83e6-6b25ddfff007"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무<br/><br/></strong></mark><strong>-</strong><mark class="highlight-teal"><strong> </strong></mark>PlayFramework로 구현되어 있는 엔카매거진 API를 Spring Boot로 전환 개발</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="14e83e9a-5162-804b-9f39-c1942e95c890"><div style="font-size:1.5em"><span class="icon">🗣</span></div><div style="width:100%"><p id="cad7db25-7a14-4c70-a4da-5401e09d0765" class=""><mark class="highlight-teal"><strong>설명</strong></mark></p><ol type="1" id="16683e9a-5162-8092-830d-c2b99a2808d3" class="numbered-list" start="1"><li>Play Framework → Spring Boot 전환<ul id="16683e9a-5162-805c-a5c3-f1a10f618819" class="bulleted-list"><li style="list-style-type:disc">기존 담당자 퇴사 후 Play Framework 인수인계 진행</li></ul><ul id="16683e9a-5162-80dc-a4a4-d08f06f053f5" class="bulleted-list"><li style="list-style-type:disc">사내 기술스택(Spring Boot)과의 통일성을 위해 API 전체를 전환</li></ul><ul id="16683e9a-5162-80c6-a275-ca7ba8f2c478" class="bulleted-list"><li style="list-style-type:disc">Access Log 분석을 통해 사용되지 않는 API(약 200여 개) 제거</li></ul></li></ol><ol type="1" id="16683e9a-5162-8035-8940-d4bd93abc23d" class="numbered-list" start="2"><li>Restful API 구조로 개선<ul id="289237df-7403-489a-a116-5ae5ca1c653c" class="bulleted-list"><li style="list-style-type:disc">예) /v1/post/list/get → /posts 형태로 uri uniform 준수</li></ul><ul id="8da84654-b729-4871-a27c-34a34fe509ef" class="bulleted-list"><li style="list-style-type:disc">HTTP 메소드(GET/POST/PUT/DELETE)와 Http Status Code를 표준화해 로직 표현</li></ul></li></ol><ol type="1" id="ab58d373-88f2-4516-a33d-938bdd1cdee1" class="numbered-list" start="3"><li>기술 스택 고도화<ul id="16683e9a-5162-80b6-9874-eadfb70a365e" class="bulleted-list"><li style="list-style-type:disc">쿼리 동적생성: Criteria API → QueryDSL 전한</li></ul><ul id="16683e9a-5162-80ce-bd46-f31421480f13" class="bulleted-list"><li style="list-style-type:disc">API 인증키: 기존 고정 키 → 인증 서버를 통해 발급받은 JWT Access Token 사용</li></ul></li></ol><ol type="1" id="16683e9a-5162-8083-a7cf-dd31f7596073" class="numbered-list" start="4"><li>성능 최적화 및 안정성 강화<ul id="16683e9a-5162-8005-bf47-d0e887c8623a" class="bulleted-list"><li style="list-style-type:disc">캐시 적용이 가능한 API에는 Redis 기반 캐싱 도입</li></ul><ul id="16683e9a-5162-8029-9d82-f3c92e075833" class="bulleted-list"><li style="list-style-type:disc">사용량이 적은 API부터 점진적 전환, 모니터링 후 사용량이 큰 API 전환</li></ul><ul id="16683e9a-5162-8038-a8c1-cca16b492e25" class="bulleted-list"><li style="list-style-type:disc">성능 테스트를 통해 Play API와 동등 이상 성능 달성</li></ul></li></ol></div></figure><p id="c60df427-0a64-40ee-89b7-33d4c21edef8" class="">
+</p><p id="66ad8161-3ec1-441a-a853-1f66e59b663d" class=""><span style="border-bottom:0.05em solid"><strong>카픽<br/><br/></strong></span>차량 정보 공유 커뮤니티<span style="border-bottom:0.05em solid"><strong><br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2017.12 ~ 2018.04</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ac50883e-cab8-4fbf-94ae-ddde2823fb96"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: MariaDB<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5974a1cc-be4a-4e48-8da6-f33038163bea"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- API 설계 및 개발<br/>- 포스트 리스팅, 추천, 포스트 상세 API 개발<br/></div></figure><p id="6553b4ca-613b-42de-b912-dfa5c23d5be0" class="">
+</p><p id="101cd72b-d729-493b-9629-07177b07a7c8" class=""><span style="border-bottom:0.05em solid"><strong>엔카매거진 기사 포탈 자동 송출<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2017.10 ~ 2017.11</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1ff34f3e-a3de-4591-afc1-3c0ee695b6c4"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java<br/>프레임워크: PlayFramework, JPA<br/>DB: MariaDB<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b5fa8abe-6fb4-414e-a103-f60b95bc1a1e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 카카오 하모니, zum과 업무 협약을 통해 기사 자동 송출 기능 개발<br/>- 기사를 일정 시간마다 가져갈 수 있도록 API 설계, 개발 및 담당자와 커뮤니케이션<br/>- 포스트 리스팅, 추천, 포스트 상세 API 개발<br/></div></figure><p id="a968691c-628a-4d24-9702-027a8a74e912" class="">
+</p><p id="7163181c-11a0-443b-bf31-f61edfdd5cbc" class=""><span style="border-bottom:0.05em solid"><strong>엔카매거진 소셜 로그인, 소셜 댓글 통합<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2017.08 ~ 2017.09</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ff072ab7-7914-494f-a00c-24f9e4e00f37"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술</strong></mark><br/>언어: Java, JavaScript<br/>프레임워크: PlayFramework, Node.js, JPA, React<br/>DB: MariaDB<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="57c00066-5967-4365-8840-5926e2ab1694"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 댓글 작성 시 소셜 아이디로 회원가입 / 로그인 가능하도록 기능 개발<br/>- 네이버, 카카오, 페이스북, 구글 로그인 기능 개발 및 기존 회원 통합<br/>- 유튜브 영상이 포함된 기사는 유튜브 댓글을 함께 보여주고 페이스북에 공유된 기사는 페이스북 댓글을 함께 보여주도록 기능 개발<br/>- 페이스북, 유튜브 댓글 API 사용하여 사이트 내에서 댓글 조회, 등록, 수정 기능 개발<br/></div></figure><p id="735b7ae2-6c22-417c-a95f-c7c042ed7587" class="">
+</p><p id="425f52b5-43fd-498d-ab79-1c2688fbd685" class=""><span style="border-bottom:0.05em solid"><strong>신차 네이티브 광고 시스템</strong></span><br/>엔카닷컴 중고차 리스트에 네이티브 광고형태의 신차 광고를 삽입하기위한 백오피스 시스템<br/><span style="border-bottom:0.05em solid"><strong><br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2017.03 ~ 2017.07</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6efc185d-a263-437a-89f1-37f6e2a33b3f"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Spring Boot, Node.js, Spring Data JPA, React<br/>DB: MariaDB<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="144a55fb-d57b-4427-9ec3-355cbd2ebf52"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무<br/><br/></strong></mark>- 광고주 광고 등록, 관리자 검토, 승인, 송출, 회수 등의 API 설계 및 개발<br/>- 광고주와 관리자가 사용할 관리 시스템 개발<br/></div></figure><p id="8111af27-d825-43e4-93b2-a98d6633a58e" class="">
+</p><p id="7046e174-8a61-48a5-8f3a-fef66262458f" class=""><span style="border-bottom:0.05em solid"><strong>신차 쇼룸</strong></span><br/>신차 정보와 신차 광고, 신차 견적요청 등의 서비스<br/><span style="border-bottom:0.05em solid"><strong><br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2016.12 ~ 2017.02</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0aa6753e-7041-4e75-b7e3-62dbf332f175"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Spring Boot, Node.js, Spring Data JPA, React<br/>DB: MariaDB<br/>인프라: AWS<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="781d2bc7-81aa-48db-8843-75cae481bdc7"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><mark class="highlight-teal"><strong>담당업무<br/><br/></strong></mark>- 엔카매거진 내에 신차 정보와 신차 광고, 신차 견적요청 등 신차 쇼룸 메뉴 개발<br/>- 신차 정보, 신차 광고 API 설계 및 개발<br/>- 신차 정보 관리, 신차 광고 관리, Jato 정보 migration API와 관리 시스템 개발<br/></div></figure><p id="ddc2da51-3409-4804-957b-9cea7067fc56" class="">
+</p><h3 id="a4e4e80b-f886-4ed9-8407-12c38525b76c" class="">🏢 양재미디어</h3><p id="78533b19-d451-40fa-92ae-6671c620f9a6" class="">CMS(Content Managerment System)</p><ul id="dcdb6106-6321-442e-bd23-898f21075373" class="bulleted-list"><li style="list-style-type:disc">컨텐츠를 패키지화 하여 관리하며 다양한 플랫폼으로 컨텐츠를 송출하고 신문 등의 매체로 제작할 수 있는 시스템</li></ul><p id="42b9f537-bef9-46f7-8d32-225d56a92090" class="">
+</p><p id="ef0dcf3f-8f1b-480c-8358-83d3cf105321" class=""><span style="border-bottom:0.05em solid"><strong>세계일보 CMS 고도화<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2016.07 ~ 2016.10</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3b4b7033-37d7-42d7-8575-02fa44185c2a"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: MariaDB<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4b09a693-311d-48f6-9241-8cdd4d296f4c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 기사제작, 신문 제작관리, 지면조판, 송출 API 개발<br/>- 기사 이미지 편집툴 개발<br/></div></figure><p id="92e4c58b-d274-4dc0-99d9-6b9ccc2bd0a0" class="">
+</p><p id="c190b9a4-89a2-4325-bcb4-f84a1f3cf2b2" class=""><span style="border-bottom:0.05em solid"><strong>한겨례 CMS 구축<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2016.01 ~ 2016.06</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4ca82de3-b624-4d02-a79d-0439d4cbf53b"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: MariaDB<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a6b4251e-0aed-4f06-aa2a-9ed3af40f2d1"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 기사제작, 신문 제작관리, 신문 템플릿관리, 지면조판, 송출 API 설계 및 개발<br/>- 시스템 세부 기능 개발, CKEditor 기반의 템플릿 기사 제작 프로그램, API를 구성하여 InDesign과 데이터 연동 후 신문지면 제작, 송출 프로그램 개발<br/></div></figure><p id="4db460c8-e1c0-458e-b156-7a8798c3efc4" class="">
+</p><p id="2f6885f2-cb70-47a0-8e36-334c1473ff90" class=""><span style="border-bottom:0.05em solid"><strong>국회 온라인 미디어 시스템<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2015.09 ~ 2015.12</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="aaafb070-2929-4dc1-b860-27b70a16852e"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: Oracle<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2330305b-9fa6-45ce-a8cd-b589ae1ab98d"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 국회 소식지인 국회ON에 의원 보도자료, 행사알림, 설문, 퀴즈 ,추첨, 국회소식 구독관리, 팝업관리 설계, 화면개발 및 API 개발<br/>- CMS 시스템 세부 기능 개발<br/>- CKEditor 기반의 기사 제작 프로그램, 신문승인(가출고, 완료출고, 교열요청, 교열완료, 웹서비스, 웹편집 등) 개발<br/></div></figure><p id="8d1bc514-6792-4a1f-aa9d-0cacd36cb265" class="">
+</p><p id="d8980514-8603-4ee0-836a-8fa24ea7e2c6" class=""><span style="border-bottom:0.05em solid"><strong>세계일보 CMS 구축<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2015.04 ~ 2015.08</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e71f5590-6e12-4fa6-af8d-0194671530ef"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java<br/>프레임워크: Spring Boot, Spring Data JPA<br/>DB: MariaDB<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ce94c202-1008-45bc-83ee-b131a9bced69"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 기사 수집, 배포 API 개발<br/>- 포털 또는 언론사에 배포될 기사 템플릿 변환 모듈 개발<br/></div></figure><p id="04bbc10d-124b-4839-bc5d-78299695b764" class="">
+</p><p id="c078c8a7-d99d-4f0e-b098-b6830a99990b" class="">
+</p><h3 id="1eb7294e-6acf-422c-8436-c7f83158ea2d" class="">🏢 지산웨어</h3><p id="14f4afc8-44c2-4cc0-9512-37c236df924f" class="">PMS(Project Managerment System)</p><ul id="2f4cdf58-fb86-4fc7-82cd-3054d0c4e9d7" class="bulleted-list"><li style="list-style-type:disc">지산웨어에서 개발한 로우코드 플랫폼으로 개발된 프로젝트 관리 시스템</li></ul><p id="f4de6b35-7599-470b-99cd-36c4dc5a788b" class="">
+</p><p id="3c5bea01-2ae9-442c-912c-fbda85416e31" class=""><span style="border-bottom:0.05em solid"><strong>한일이화 PMS 구축<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2015.01 ~ 2015.03</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3a8b6d7d-0d7e-4d14-90d4-a897e2db5a00"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Struts X Spring<br/>라이브러리: MyBatis<br/>DB: MSSQL<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13bed609-64bb-4a15-94aa-32bd8ec07b02"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 사내 솔루션인 로우코드 플랫폼 기반으로 PMS 개발</div></figure><p id="bb82501a-347a-44e1-bb8d-9f997fbd02af" class="">
+</p><p id="07777c0f-c619-48c1-9810-b336449ec400" class=""><span style="border-bottom:0.05em solid"><strong>임업진흥원 정보기술 아키텍처 시스템 구축<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2014.04 ~ 2014.12</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="230bca1b-a575-42d3-b1dc-402b5bcf9029"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: 전자정부프레임워크<br/>라이브러리: MyBatis<br/>DB: Oracle<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2391db71-a368-4bc3-bce2-ec3e43e105a0"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 전자정부프레임워크 기반 정보화사업관리시스템 개발<br/>- 각 정보자원 현황 메인 대시보드 데이터 그래프 개발<br/>- 범정부기준 EA메타 매핑 관리 기능 개발<br/></div></figure><p id="0cf46e54-edd3-4e79-aca3-d2642cabf7b9" class="">
+</p><p id="a0351755-a71e-448b-8a33-2599cc8f26bc" class=""><span style="border-bottom:0.05em solid"><strong>정부통합전산센터 PMS 구축<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2013.07 ~ 2014.03</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2f5cd425-a9c5-40c2-9bbc-0729598256ab"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Struts X Spring<br/>라이브러리: iBatis<br/>DB: Cubrid<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="0dcc8fe9-b4f4-4815-b352-a35d8c6e29c5"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 사내 솔루션인 로우코드 플랫폼 기반으로 PMS 개발<br/>- 템플릿기반의 엑셀 다운로드 기능 개발<br/></div></figure><p id="53611ebd-b484-461b-88e3-0984b3ba654e" class="">
+</p><p id="8f8e1c10-bae8-4248-b00f-7963729491e6" class=""><span style="border-bottom:0.05em solid"><strong>로우코드 플랫폼<br/><br/></strong></span>📅 <mark class="highlight-gray"><span style="border-bottom:0.05em solid"><em>2013.02 ~ 2015.03</em></span></mark></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="67c441ed-684f-4218-8fd9-5eb9cbce4531"><div style="font-size:1.5em"><span class="icon">🔩</span></div><div style="width:100%"><mark class="highlight-teal"><strong>사용기술<br/><br/></strong></mark>언어: Java, JavaScript<br/>프레임워크: Struts X Spring<br/>라이브러리: MyBatis<br/>DB: Oracle<br/></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5b035bf0-9ea8-4538-82db-b799f62c871f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong><mark class="highlight-teal">담당업무<br/><br/></mark></strong>- 솔루션 유지보수 및 기능 추가 개발</div></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

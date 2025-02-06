@@ -1,9 +1,0 @@
-﻿Type,Skill
-Language,"Java, Javascript, Kotlin, SQL, Typescript"
-Web Framework,"Node.js, React, Spring Authorization Server, Spring Batch, Spring Boot, Spring Cloud, Spring Data JPA, Spring Security"
-Database,"MariaDB, MongoDB, MySQL, Oracle, PostgreSQL"
-Message Queue,"Kafka, RabbitMQ"
-Cache,"Caffeine, Redis"
-Server Infra,"Docker, Kubernetes"
-Cloud,"AWS, Azure"
-ETC,"ArgoCD, FlagSmith, Jenkins, Keycloak, Nginx, Pinpoint, Scavenger"

@@ -23,7 +23,7 @@
 	<link id="theme-style" rel="stylesheet" href="assets/css/shine.css">
 	<style>
 		.company-logo {
-			height: 25px; /* 적절한 크기로 조정 */
+			width: 100%;
 			display: block; /* 블록 요소로 만들어 줄바꿈 효과 */
 			margin-bottom: 3px; /* 회사명과 간격 조정 */
 		}
@@ -39,6 +39,9 @@
 			margin-top: 5px;  /* 상단 여백 조정 */
 			margin-left: 20px; /* 들여쓰기 */
 			list-style-type: circle; /* 기본 불릿 스타일 변경 (원형) */
+		}
+		.resume-position-meta {
+			font-size: 0.9em;
 		}
 	</style>
 
@@ -71,9 +74,9 @@
 									<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-2 py-lg-3"><i class="resume-section-heading-icon bi bi-person me-2"></i>About Me</h3>
 									<div class="resume-summary-desc">
 										안녕하세요! 킥스타트 서비스부터 대규모 서비스 개발/운영 경험이 있는 심수현입니다.<br/>
-										<b>MAU 600만 이상</b>의 O2O 서비스, <b>누적 회원수 800만</b>의 컨텐츠 서비스에서 백엔드 개발자로 일하며 서비스의 안정성과 확장성을 고려한 개발을 하였습니다.<br/>
-										매 순간 개발 자체를 즐기고 새로운 기술이나 서비스를 발견하면 팀원들과 공유하고 함께 성장하기 위해 적극적으로 커뮤니케이션하는 성향입니다.<br/>
-										팀의 기술적 성장에 관심이 많아서 기술 트랜드를 꾸준히 공부하며 저와 팀원 모두 더 나은 방향으로 가고 그 과정을 통해 모두가 성장해 나가는 모습을 보는 것이 제가 개발자로 일하는 가장 큰 즐거움이라고 느끼며 저의 긍정적인 에너지를 전하고 훌륭한 서비스를 만들어가는데 기여하고 싶습니다.
+										<b>MAU 600만 이상</b>의 O2O 서비스, <b>누적 회원수 800만</b>의 컨텐츠 서비스에서 백엔드 개발자로 일하며 <span style="background-color: black; color: white; padding: 2px 5px;">서비스의 안정성과 확장성</span>을 고려한 개발을 하였습니다.<br/>
+										매 순간 개발 자체를 즐기고 새로운 기술이나 서비스를 발견하면 팀원들과 공유하며 함께 성장하기 위해 적극적으로 커뮤니케이션하는 성향입니다.<br/>
+										팀의 <span style="background-color: black; color: white; padding: 2px 5px;">기술적 성장</span>에 관심이 많아 기술 트랜드를 꾸준히 공부하며, 저와 팀원 모두 더 나은 방향으로 가고 그 과정을 통해 <span style="background-color: black; color: white; padding: 2px 5px;">모두가 성장</span>하는 모습을 보는 것이 제가 개발자로 일하는 가장 큰 즐거움이며, 저의 <span style="background-color: black; color: white; padding: 2px 5px;">긍정적인 에너지</span>를 전해 훌륭한 서비스를 만들어가는데 기여하고 싶습니다.
 									</div>
 								</section><!--//resume-section-->
 
@@ -89,58 +92,65 @@
 												<div class="resume-position-meta d-flex justify-content-between mb-1">
 													<div class="resume-position-time">2020.06 - 현재</div>
 													<div class="resume-company-name">
-													   	<img src="assets/images/skp_logo.png" class="company-logo" alt="SKP 로고">
+													   	<img src="assets/images/skp_logo.png" class="company-logo" alt="SKP 로고" height="45">
 														<span>SK플래닛</span>
 													</div>
 												</div>
 											</div><!--//resume-timeline-item-header-->
 											<div class="resume-timeline-item-desc">
 												<h3 class="resume-position-title mb-1">V컬러링 서비스 개발 및 운영</h3>
-
 												<ul class="resume-timeline-list">
 													<li>나에게 전화하는 상대방에게 내가 설정한 영상을 보여주는 서비스</li>
-													<li>회원수 약 <b>800만</b>, 유료 회원수 약 <b>160만</b></li>
-													<li>2019년부터 개발된 서비스로 조직개편하여 2023년에 합류</li>
-													<li>기술적 의사결정 및 팀 내 협업을 주도하고 기술공유, 레거시 전환, 인프라 전환, 모니터링 구축, 개발 문화 정립 등을 주도적으로 진행</li>
-													<li>V컬러링 회원 로그인, 인증, 회원관리, 부가서비스 가입, 상품 관리 데이터 모델링 및 API 개발</li>
-													<li>레거시 시스템 전환 및 버전 업데이트
+													<li><b>V컬러링 인증 정책, 인증서버, 회원, SSO, 부가서비스 가입, 상품 <u>개발</u></b></li>
+													<li>회원수 약 <b>800만</b>, 유료 회원수 약 <span style="background-color: black; color: white; padding: 2px 5px;">160만</span></li>
+													<li>2019년부터 개발된 서비스로 조직개편하여 <b>2023년 2월에 합류</b></li>
+													<li><b>기술적 의사결정 및 팀 내 협업 주도</b>, 기술공유, 레거시 전환, 인프라 전환, 모니터링 구축, 개발 문화 정립 등을 주도적으로 진행</li>
+													<li><b>V컬러링</b> 회원 로그인, 인증, 회원관리, 부가서비스 가입, 상품 관리 <u>데이터 모델링</u> 및 <u>API 개발</u></li>
+
+													<li><b>레거시 시스템 전환 및 버전 업데이트</b>
 														<ul>
-															<li>Java 업데이트 8 → 17</li>
-															<li>SpringBoot 2.2 → 2.7</li>
+															<li>Java 업데이트 <span style="background-color: black; color: white; padding: 2px 5px;">8 → 17</span></li>
+															<li>SpringBoot <span style="background-color: black; color: white; padding: 2px 5px;">2.2 → 2.7</span></li>
 														</ul>
 													</li>
-													<li>Spring Authorization Server 기반 인증서버 구축 및 도입
+
+													<li><b>Spring Authorization Server 기반 인증서버 구축 및 도입</b>
 														<ul>
-															<li>서버 세션 기반 인증구조를 JWT 기반 Stateless 구조로 전환</li>
-															<li>피처플래그를 통해 인증서버로 점진적 전환 수행(내부 직원 → 일반 사용자 10%~100%)</li>
-															<li>인증/인가로 인한 저장소 IO 개선 → QPS 174 → 0.7(총 QPS 780 → 600)</li>
+															<li>서버 세션 기반 인증구조를 <u>OAuth2 인증 JWT 기반 Stateless 구조</u>로 전환</li>
+															<li>피처플래그를 통해 인증서버로 점진적 전환 수행 (<b>내부 직원 → 일반 사용자 10%~100%</b>)</li>
+															<li>인증/인가로 인한 저장소 IO 개선 → <span style="background-color: black; color: white; padding: 2px 5px;">QPS 174 → 0.7</span> (총 QPS <b>780 → 600</b>)</li>
 														</ul>
 													</li>
-													<li>스캐빈저(미사용 코드 제거 툴) 도입
+
+													<li><b>스캐빈저(미사용 코드 제거 툴) 도입</b>
 														<ul>
-															<li>업데이트 및 시스템 전환 효율성 증대, 전사 도입 제안 발표 후 수상 </li>
-															<li>총 메소드 약 50% 제거 (메소드 갯수 35,000 → 18,000)</li>
+															<li>업데이트 및 시스템 전환 <b>효율성 증대</b>, 전사 도입 제안 발표 후 <b>수상</b></li>
+															<li>총 메소드 약 <span style="background-color: black; color: white; padding: 2px 5px;">50% 제거</span> (메소드 개수 <b>35,000 → 18,000</b>)</li>
 														</ul>
 													</li>
-													<li>컨테이너 환경 전환(Docker, Kuberentes)
+
+													<li><b>컨테이너 환경 전환 (<u>Docker, Kubernetes</u>)</b>
 														<ul>
-															<li>인프라 비용 현재 30% 절감(VM 160여대 → VM 80여대, k8s Node 20여대)</li>
-															<li>모든 서비스 k8s로 옮기는 작업 진행중</li>
-															<li>서비스 배포 속도 향상 및 안정성 강화(월 1회 배포 → 수시 배포)</li>
-															<li>팀 내 k8s 교육 및 정착</li>
-															<li>피처플래그를 이용해 API 트래픽을 1~100%까지 점진적으로 전환</li>
+															<li>인프라 비용 <span style="background-color: black; color: white; padding: 2px 5px;">30% 절감</span> (VM <b>160대 → 약 80대</b>, k8s Node <b>약 20대</b>)</li>
+															<li>모든 서비스 <u>Kubernetes</u>로 마이그레이션 진행 중</li>
+															<li>속한 서비스 배포 속도 향상 및 안정성 강화 (<b>월 1회 배포 → 수시 배포</b>)</li>
+															<li>팀 내 <b>Kubernetes 교육 담당 및 정착 수행</b></li>
+															<li>피처플래그를 이용해 <b>Kubernetes로 전환된 API로 라우팅을 1~100%</b>까지 모니터링하며 점진적으로 안정적인 전환 환경 구축</li>
 														</ul>
 													</li>
-													<li>모니터링 시스템 구축 </li>
+
+													<li><b>모니터링 시스템 구축</b>
 														<ul>
-															<li>APM(Pinpoint) 도입</li>
-															<li>Prometheus, Loki, Grafana 도입 및 대시보드, 알람 설정</li>
+															<li><u>APM (Pinpoint)</u> 도입</li>
+															<li><u>Prometheus, Loki, Grafana</u> 도입 및 대시보드, 알람 설정</li>
 														</ul>
-													<li>개발 문화 정립
+													</li>
+
+													<li><b>개발 문화 정립</b>
 														<ul>
-															<li>코드 리뷰 프로세스</li>
-															<li>코드 컨벤션 정립 및 공유</li>
-															<li>정기 코드리뷰 세션 주관</li>
+															<li><u>코드 리뷰 프로세스</u> 정립</li>
+															<li><u>코드 컨벤션</u> 정립 및 공유</li>
+															<li>정기 <b>코드리뷰 세션 주관</b></li>
 														</ul>
 													</li>
 												</ul>
@@ -162,35 +172,43 @@
 													<li class="list-inline-item"><span class="badge resume-skill-badge">Kubernetes</span></li>
 												</ul>
 											</div><!--//resume-timeline-item-desc-->
+											<hr style="border: 1px solid #ccc; margin: 20px 0;">
 											<div class="resume-timeline-item-desc">
 												<h3 class="resume-position-title mb-1">BaaS(Battery as a Service) 플랫폼</h3>
 
 												<ul class="resume-timeline-list">
-													<li>전기차 충전시 충전데이터를 수집하여 배터리 상태 모니터링과 다양한 지표를 사용자에게 제공하는 서비스</li>
-													<li>Azure AKS 기반 아키텍처 및 DevOps 파이프라인 구성
+													<li>전기차 충전 시 충전 데이터를 수집하여 배터리 상태 모니터링과 다양한 지표를 사용자에게 제공하는 서비스</li>
+
+													<li><b>Azure AKS 기반 아키텍처 및 DevOps 파이프라인 구성</b>
 														<ul>
-															<li>k8s를 개인적으로 학습한 내용을 바탕으로 Azure DevOps를 활용해 CI/CD 자동화 파이프라인 설계</li>
-															<li>인프라 프로비저닝, 모니터링, 롤백 전략 등을 고려하여 안정적인 배포 환경 구현</li>
+															<li><u>Kubernetes</u>를 개인적으로 학습한 내용을 바탕으로 <u>Azure DevOps</u>를 활용해 <b>CI/CD 자동화 파이프라인 설계</b></li>
+															<li>인프라 프로비저닝, 모니터링, 롤백 전략 등을 고려하여 <b>안정적인 배포 환경 구현</b></li>
 														</ul>
 													</li>
-													<li>인증 서버(Keycloak) 구성</li>
-													<li>전기차 충전기 간편진단 API 개발
+
+													<li><b>인증 서버 (<u>Keycloak</u>) 구성</b></li>
+
+													<li><b>전기차 충전기 간편진단 API 개발</b>
 														<ul>
-															<li>전기차 충전 데이터를 충전중에 실시간으로 수집하여 ML서버로 전달</li>
-															<li>ML서버가 충전 데이터를 기반으로 배터리를 진단한 데이터를 제공</li>
+															<li>전기차 충전 데이터를 충전 중에 실시간으로 수집하여 <u>ML 서버</u>로 전달</li>
+															<li><u>ML 서버</u>가 충전 데이터를 기반으로 배터리를 진단한 데이터를 제공</li>
 														</ul>
 													</li>
-													<li>클린 아키텍처 도입 </li>
+
+													<li><b>클린 아키텍처 도입</b>
 														<ul>
-															<li>클린 아키텍처 지향을 제안하고 예제 코드를 통해 팀원들과 공유 및 적용</li>
-															<li>모듈 단위 책임 분리를 통해 유지보수성과 확장성을 높이는 데 주력</li>
+															<li>클린 아키텍처 적용을 제안하고 예제 코드를 통해 <b>팀원들과 공유 및 적용</b></li>
+															<li>모듈 단위 책임 분리를 통해 <b>유지보수성과 확장성 강화</b></li>
 														</ul>
-													<li>CES 2023 출품
+													</li>
+
+													<li><span style="background-color: black; color: white; padding: 2px 5px;">CES 2023 출품</span>
 														<ul>
 															<li>충전기 사업자와의 제휴를 통해 서비스 범위를 지속적으로 확장 중</li>
 														</ul>
 													</li>
 												</ul>
+
 												<ul class="list-inline">
 													<li class="list-inline-item"><span class="badge resume-skill-badge">Java</span></li>
 													<li class="list-inline-item"><span class="badge resume-skill-badge">Kotlin</span></li>
@@ -207,32 +225,39 @@
 													<li class="list-inline-item"><span class="badge resume-skill-badge">Keycloak</span></li>
 												</ul>
 											</div><!--//resume-timeline-item-desc-->
+											<hr style="border: 1px solid #ccc; margin: 20px 0;">
 											<div class="resume-timeline-item-desc">
 												<h3 class="resume-position-title mb-1">스마트 병원</h3>
 
 												<ul class="resume-timeline-list">
-													<li>환자, 의료진, 보호자간 화상통화 서비스와 병원정보와 의료정보를 TV 셋탑박스에 설치된 앱을 통해 제공되는 서비스</li>
-													<li>Azure 인프라 & DevOps 파이프라인 구성
+													<li>환자, 의료진, 보호자 간 화상통화 서비스와 병원정보 및 의료정보를 TV 셋탑박스에 설치된 앱을 통해 제공하는 서비스</li>
+
+													<li><b>Azure 인프라 & DevOps 파이프라인 구성</b>
 														<ul>
-															<li>Azure 클라우드 기반 AKS(k8s 클러스터)환경 구축</li>
-															<li>Azure DevOps를 통한 CI/CD 자동화 파이프라인 설계 및 운영</li>
+															<li><u>Azure 클라우드</u> 기반 <u>AKS (k8s 클러스터)</u> 환경 구축</li>
+															<li><u>Azure DevOps</u>를 통한 <b>CI/CD 자동화 파이프라인 설계 및 운영</b></li>
 														</ul>
 													</li>
-													<li>아키텍처 설계 및 구성
+
+													<li><b>아키텍처 설계 및 구성</b>
 														<ul>
-															<li>WebRTC + Mediasoup 기반 화상통화 기능 설계</li>
-															<li>Keycloak + Spring Security Oauth2 기반 사용자 인증/인가 모듈 개발</li>
+															<li><u>WebRTC</u> + <u>Mediasoup</u> 기반 화상통화 기능 설계</li>
+															<li><u>Keycloak</u> + <u>Spring Security OAuth2</u> 기반 사용자 인증/인가 모듈 개발</li>
 														</ul>
 													</li>
-													<li>미디어 서버 확장성 확보
+
+													<li><span style="background-color: black; color: white; padding: 2px 5px;">미디어 서버 확장성 확보</span>
 														<ul>
-															<li>미디어 서버 스케일링 구</li>
-															<li>WebRTC 프록시 구현</li>
+															<li><b>미디어 서버 스케일링 구축</b></li>
+															<li><b>WebRTC 프록시 구현</b></li>
 														</ul>
 													</li>
-													<li>Admin & 대시보드 개발 </li>
-													<li>병원 API의 부하 해결을 위한 Rate Limit & 캐시 적용</li>
+
+													<li><b>Admin & 대시보드 개발</b></li>
+
+													<li><b>병원 API 부하 해결</b>을 위한 <u>Rate Limit</u> & <u>캐시</u> 적용</li>
 												</ul>
+
 												<ul class="list-inline">
 													<li class="list-inline-item"><span class="badge resume-skill-badge">Java</span></li>
 													<li class="list-inline-item"><span class="badge resume-skill-badge">JavaScript</span></li>
@@ -259,7 +284,7 @@
 												<div class="resume-position-meta d-flex justify-content-between mb-1">
 													<div class="resume-position-time">2016.11 - 2020.05</div>
 													<div class="resume-company-name">
-													   	<img src="assets/images/encar_logo.png" class="company-logo" alt="Encar 로고">
+													   	<img src="assets/images/encar_logo.png" class="company-logo" alt="Encar 로고" height="35">
 														<span>엔카닷컴</span>
 													</div>
 												</div>
@@ -267,41 +292,55 @@
 											<h3 class="resume-position-title mb-1">엔카닷컴 서비스 개발 및 운영</h3>
 											<div class="resume-timeline-item-desc">
 												<ul class="resume-timeline-list">
+													<li>국내 최대 중고차 거래 플랫폼</li>
+													<li>MAU 약 <b>600만</b>, 일일 PV <span style="background-color: black; color: white; padding: 2px 5px;">1000만</span></li>
+													<li><b>오라클 Procedure 기반 주문 결제 시스템을 API 환경으로 전환</b>
+														<ul>
+															<li>모놀리식 환경 → <b>도메인 분리 및 API 전환</b></li>
+															<li>분산 트랜잭션 처리 (<u>Saga 패턴</u> 적용)</li>
+															<li>API 장애 발생 시 자동으로 기존 <u>프로시저</u>로 Failover 되는 시스템 개발</li>
+															<li>신규 상품 추가 시 개발 공수 <span style="background-color: black; color: white; padding: 2px 5px;">20일 → 5일</span>로 대폭 단축</li>
+														</ul>
+													</li>
 
-													<li>오라클 Procedure로 구성되어 있는 주문 결제 시스템을 API 환경으로 전환
+													<li><b>이미지 파일 저장소 개선</b>
 														<ul>
-															<li>모놀리식 환경 → 도메인 분리 및 API 전환</li>
-															<li>분산 트랜잭션 처리(Saga 패턴 적용)</li>
-															<li>API 장애 발생 시 자동으로 기존 프로시저로 Failover 되는 시스템 개발</li>
-															<li>신규 상품 추가 시 개발 공수 평균 20일 → 5일로 대폭 단축</li>
+															<li><u>AWS S3</u> 전환 및 업로드 API 개발</li>
+															<li><u>Lambda@Edge</u> + <u>CloudFront</u> 기반 이미지 편집/캐싱</li>
+															<li><u>NAS</u> 대비 가용성과 확장성이 높은 <b>S3, CDN 환경 도입</b></li>
+															<li>클라이언트에서 <b>이미지 로딩 속도 향상</b> (CDN + 이미지 리사이징)</li>
 														</ul>
 													</li>
-													<li>이미지 파일 저장소 개선
-														<ul>
-															<li>AWS S3 전환 및 업로드 API 개발</li>
-															<li>Lambda@Edge + CloudFront 기반 이미지 편집/캐싱</li>
-															<li>NAS 대비 가용성과 확장성 높은 S3, CDN 환경 도입</li>
-															<li>클라이언트에서 이미지 로딩 속도 향상 (CDN + 이미지 리사이징)</li>
-														</ul>
-													</li>
-													<li>비교견적 서비스 판매자, 딜러, 관리자의 후기 API 설계 및 개발</li>
-													<li>엔카닷컴 백오피스 레거시 개선 Spring Framework 2.x -> Spring Boot 2.x</li>
-													<li>비대면 한도조회 이용자 차량 추천 서비스 API 개발</li>
-													<li>차량 추천 포인트, 추천 옵션 API 개발</li>
-													<li>EV POST 배너 관리 API 개발</li>
-													<li>엔카매거진 레거시 개선 Play Framework -> Spring Boot 2.x</li>
-													<li>차량 정보 공유 커뮤니티 API 개발</li>
-													<li>엔카매거진 기사 포탈 자동 송출 인터페이스 개발</li>
-													<li>엔카매거진 소셜 로그인, 소셜 댓글 통합 개발</li>
-													<li>신차 네이티브 광고 시스템 개발</li>
-													<li>신차 정보, 신차 광고, 신차 견적요청 서비스 개발</li>
+
+													<li><b>비교견적 서비스</b> 판매자, 딜러, 관리자의 후기 API 설계 및 개발</li>
+
+													<li><b>엔카닷컴 백오피스 레거시 개선</b> (<u>Spring Framework 2.x</u> → <u>Spring Boot 2.x</u>)</li>
+
+													<li><b>비대면 한도조회 이용자 차량 추천 서비스 API 개발</b></li>
+
+													<li><b>차량 추천 포인트, 추천 옵션 API 개발</b></li>
+
+													<li><b>EV POST 배너 관리 API 개발</b></li>
+
+													<li><b>엔카매거진 레거시 개선</b> (<u>Play Framework</u> → <u>Spring Boot 2.x</u>)</li>
+
+													<li><b>차량 정보 공유 커뮤니티 API 개발</b></li>
+
+													<li><b>엔카매거진 기사 포탈 자동 송출 인터페이스 개발</b></li>
+
+													<li><b>엔카매거진 소셜 로그인, 소셜 댓글 통합 개발</b></li>
+
+													<li><b>신차 네이티브 광고 시스템 개발</b></li>
+
+													<li><b>신차 정보, 신차 광고, 신차 견적 요청 서비스 개발</b></li>
+
 												</ul>
+
 											</div><!--//resume-timeline-item-desc-->
 											<ul class="list-inline">
 												<li class="list-inline-item"><span class="badge resume-skill-badge">Java</span></li>
 												<li class="list-inline-item"><span class="badge resume-skill-badge">Spring Boot</span></li>
 												<li class="list-inline-item"><span class="badge resume-skill-badge">Spring Data JPA</span></li>
-												<li class="list-inline-item"><span class="badge resume-skill-badge">MyBatis</span></li>
 												<li class="list-inline-item"><span class="badge resume-skill-badge">JSP</span></li>
 												<li class="list-inline-item"><span class="badge resume-skill-badge">Redis</span></li>
 												<li class="list-inline-item"><span class="badge resume-skill-badge">JavaScript</span></li>
@@ -320,7 +359,7 @@
 												<div class="resume-position-meta d-flex justify-content-between mb-1">
 													<div class="resume-position-time">2015.04 - 2016.10</div>
 													<div class="resume-company-name">
-														<img src="assets/images/yjmedia_logo.png" class="company-logo" alt="양재미디어 로고">
+														<img src="assets/images/yjmedia_logo.png" class="company-logo" alt="양재미디어 로고" height="22">
 														<span>양재미디어</span>
 													</div>
 												</div>
@@ -354,9 +393,9 @@
 											<div class="resume-timeline-item-header mb-2">
 
 												<div class="resume-position-meta d-flex justify-content-between mb-1">
-													<div class="resume-position-time">2013.02 - 2015.4</div>
+													<div class="resume-position-time">2013.02 - 2015.04</div>
 													<div class="resume-company-name">
-														<img src="assets/images/jisan_logo.png" class="company-logo" alt="지산웨어 로고">
+														<img src="assets/images/jisan_logo.png" class="company-logo" alt="지산웨어 로고" height="45">
 														<span>지산웨어</span>
 													</div>
 												</div>
@@ -404,10 +443,9 @@
 											<div class="resume-skill-name">Server Infra</div>
 										</li>
 										<ul class="list-inline">
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Kubernetes</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Docker</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Linux</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Ubuntu</span></li>
+											<li class="list-inline-item"><span class="badge resume-skill-badge"">Kubernetes</span></li>
+											<li class="list-inline-item"><span class="badge resume-skill-badge"">Docker</span></li>
+											<li class="list-inline-item"><span class="badge resume-skill-badge"">Linux</span></li>
 										</ul>
 										<li class="mb-2">
 											<div class="resume-skill-name">Web Framework</div>
@@ -438,44 +476,44 @@
 										<ul class="list-inline">
 											<li class="list-inline-item"><span class="badge resume-skill-badge">AWS</span></li>
 											<li class="list-inline-item"><span class="badge resume-skill-badge">Azure</span></li>
-										</ul>
-										<li class="mb-2">
-											<div class="resume-skill-name">Message Queue</div>
-										</li>
-										<ul class="list-inline">
-											<li class="list-inline-item"><span class="badge resume-skill-badge">RabbitMQ</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Kafka</span></li>
-										</ul>
-										<li class="mb-2">
-											<div class="resume-skill-name">Memory DB</div>
-										</li>
-										<ul class="list-inline">
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Redis</span></li>
-										</ul>
-										<li class="mb-2">
-											<div class="resume-skill-name">Build Tool</div>
-										</li>
-										<ul class="list-inline">
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Gradle</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Maven</span></li>
-										</ul>
-										<li class="mb-2">
-											<div class="resume-skill-name">ETC</div>
-										</li>
-										<ul class="list-inline">
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Keycloak</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">FlagSmith</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Scavenger</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Jenkins</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">ArgoCD</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Nginx</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Pinpoint</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Prometheus</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Grafana</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Loki</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Jira</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Git</span></li>
-											<li class="list-inline-item"><span class="badge resume-skill-badge">Confluence</span></li>
+											</ul>
+											<li class="mb-2">
+												<div class="resume-skill-name">Message Queue</div>
+											</li>
+											<ul class="list-inline">
+												<li class="list-inline-item"><span class="badge resume-skill-badge">RabbitMQ</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Kafka</span></li>
+											</ul>
+											<li class="mb-2">
+												<div class="resume-skill-name">Memory DB</div>
+											</li>
+											<ul class="list-inline">
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Redis</span></li>
+											</ul>
+											<li class="mb-2">
+												<div class="resume-skill-name">Build Tool</div>
+											</li>
+											<ul class="list-inline">
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Gradle</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Maven</span></li>
+											</ul>
+											<li class="mb-2">
+												<div class="resume-skill-name">ETC</div>
+											</li>
+											<ul class="list-inline">
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Keycloak</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">FlagSmith</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Scavenger</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Jenkins</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">ArgoCD</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Nginx</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Pinpoint</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Prometheus</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Grafana</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Loki</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Jira</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Git</span></li>
+												<li class="list-inline-item"><span class="badge resume-skill-badge">Confluence</span></li>
 										</ul>
 									</ul>
 								</section><!--//resume-section-->
@@ -485,7 +523,7 @@
 								<section class="resume-projects-section resume-section">
 									<h3 class="resume-section-heading text-uppercase py-2 py-lg-3 py-3"><i class="resume-section-heading-icon bi bi-code-slash me-2"></i>Projects</h3>
 									<div class="item">
-										<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i><a href="https://www.vcoloring.com/">V컬러링</a></h4>
+										<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i><a href="https://www.vcoloring.com/"><u>V컬러링</u></a></h4>
 										<div class="item-desc">
 											나에게 전화하는 상대방에게 내가 설정한 영상을 보여주는 컬러링 서비스
 										</div>
@@ -497,7 +535,7 @@
 										</div>
 									</div><!--//item-->
 									<div class="item">
-										<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>스마트병원</h4>
+										<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i>스마트 병원</h4>
 										<div class="item-desc">
 											환자, 의료진, 보호자간 화상통화 서비스와 병원정보와 의료정보를 TV 셋탑박스에 설치된 앱을 통해 제공되는 서비스
 										</div>
@@ -509,7 +547,7 @@
 										</div>
 									</div><!--//item-->
 									<div class="item">
-										<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i><a href="https://www.encar.com">엔카닷컴</a></h4>
+										<h4 class="item-heading"><i class="item-icon bi bi-square-fill me-2"></i><a href="https://www.encar.com"><u>엔카닷컴</u></a></h4>
 										<div class="item-desc">
 											국내 최대 중고차 거래 플랫폼
 										</div>
@@ -542,8 +580,6 @@
 	</div><!--//container-->
 	
 	<footer class="footer text-center py-4">
-		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-		<small class="copyright">Designed with <span class="sr-only">love</span><i class="bi bi-heart-fill" style="color:#fe655c"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
 	</footer>
 
 </body>

@@ -1,0 +1,21 @@
+.company-logo {
+    width: 100%;
+    display: block; /* 블록 요소로 만들어 줄바꿈 효과 */
+    margin-bottom: 3px; /* 회사명과 간격 조정 */
+}
+
+.resume-company-name {
+    background: none !important;
+    display: block; /* 한 줄이 아니라 세로 정렬되도록 변경 */
+    text-align: center; /* 가운데 정렬 */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.resume-timeline-list ul {
+    margin-top: 5px;  /* 상단 여백 조정 */
+    margin-left: 20px; /* 들여쓰기 */
+    list-style-type: circle; /* 기본 불릿 스타일 변경 (원형) */
+}
+.resume-position-meta {
+    font-size: 0.9em;
+}

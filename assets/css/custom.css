@@ -19,3 +19,15 @@
 .resume-position-meta {
     font-size: 0.9em;
 }
+.light-mode .resume-skill-badge {
+    background: #eaeaea;
+    color: #43516b;
+    padding: 7px;
+}
+
+.skill-icon {
+    width: 20px; /* 아이콘 크기 조정 */
+    height: 20px; /* 아이콘 크기 조정 */
+    margin-right: 5px; /* 문자와의 간격 조정 */
+    vertical-align: middle; /* 텍스트와 수직 정렬 */
+}

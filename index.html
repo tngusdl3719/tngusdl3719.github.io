@@ -89,7 +89,7 @@
 
 													<li><b>인증서버 구축 및 도입</b>
 														<ul>
-															<li>세션 기반 인증구조를 <u>OAuth2 인증 JWT 기반 Stateless 구조</u>로 무중단 전환</li>
+															<li>세션 기반 인증구조를 <u>OAuth2 인증 JWT 기반 Stateless 구조</u>로 <b>Feature Flag</b> 활용한 무중단 전환</li>
 															<li>인증/인가로 인한 저장소 IO 개선 → <span style="background-color: black; color: white; padding: 2px 5px;">QPS 174 → 0.7</span> (총 QPS <b>780 → 600</b>)</li>
 														</ul>
 													</li>
@@ -111,6 +111,10 @@
 													</li>
 
 													<li><b>모니터링 시스템 구축</b>
+														<ul>
+															<li>Prometheus + Promtail + Loki + Grafana, Pinpoint</li>
+															<li>자체 알림 시스템 구축</li>
+														</ul>
 													</li>
 
 													<li><b>개발 문화 정립</b>
